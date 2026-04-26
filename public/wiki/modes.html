@@ -53,6 +53,7 @@
       <a href="enemies-fallen.html" class="nav-link">🟣 Fallen Enemies</a>
       <a href="enemies-frosty.html" class="nav-link">🔵 Frosty Enemies</a>
       <a href="enemies-hardcore.html" class="nav-link">🔴 Hardcore Enemies</a>
+      <a href="enemies-tvz.html" class="nav-link">🧟 TvZ Enemies</a>
     </div>
     <div class="nav-section">
       <div class="nav-section-title">Other</div>
@@ -136,6 +137,38 @@
         <li><strong>Dark Summon</strong> — summons Fallen Shield + Fallen Hero pairs. Cooldown 10–18s.</li>
         <li><strong>10% armor, 80% slow resistance</strong></li>
       </ul>
+    </div>
+    <div class="wiki-section" id="tvz">
+      <h2>Towers vs Zombies (Event) <span style="color:var(--gold); font-size:16px;">(Sandbox Exclusive)</span></h2>
+      <p>Ивент «Towers vs Zombies» (или сокращенно TvZ, вдохновленный жанром Plants vs. Zombies) — это уникальный режим, доступный исключительно через админ-панель в режиме Sandbox.</p>
+      
+      <h3>1. Структура игрового поля</h3>
+      <p>В отличие от стандартных карт с извилистыми путями, этот режим полностью меняет геометрию уровня:</p>
+      <ul>
+        <li><strong>Сетка 5×9</strong>: Игровое поле делится на 5 горизонтальных рядов и 9 колонок.</li>
+        <li><strong>Прямые пути</strong>: В каждом из 5 рядов враги движутся по строго горизонтальной линии справа налево.</li>
+        <li><strong>Зоны размещения</strong>: Юниты (башни) размещаются в ячейках этой сетки, защищая свои линии.</li>
+      </ul>
+
+      <h3>2. Особенности экономики и волн</h3>
+      <p>Режим имеет уникальные настройки прогрессии:</p>
+      <ul>
+        <li><strong>Стартовый бюджет</strong>: Игроку выдается фиксированная сумма $500.</li>
+        <li><strong>Отсутствие наград за убийство</strong>: В этом режиме за уничтожение зомби не начисляются деньги (lmoney и bmoney равны 0), что заставляет игрока стратегически использовать начальный капитал.</li>
+        <li><strong>Количество волн</strong>: Ивент состоит из 10 волн нарастающей сложности.</li>
+      </ul>
+
+      <h3>3. Состав волн (WAVE_DATA)</h3>
+      <p>Пример прогрессии врагов в ивенте:</p>
+      <ul>
+        <li><strong>Волны 1–3</strong>: Только обычные зомби (от 1 до 3 штук).</li>
+        <li><strong>Волна 5</strong>: Группа из BucketZombie (2), обычных зомби (3) и Conehead (2).</li>
+        <li><strong>Волна 8</strong>: Усиленный отряд: Bucket (5), Normal (5), Conehead (5) и Football (3).</li>
+        <li><strong>Волна 10</strong>: Финальное испытание с участием самых мощных юнитов.</li>
+      </ul>
+
+      <h3>Как запустить:</h3>
+      <div class="info-box">Поскольку ивент скрыт, он активируется только в режиме Sandbox через меню администратора (Admin Panel) или специальные отладочные команды, которые переключают CURRENT_MAP на сетку TvZ и загружают TVZ_WAVE_DATA.</div>
     </div>
   </article>
 </main>
