@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ─── Screenshots gallery ───
-const SS_TOTAL = 5;
+const SS_TOTAL = 8;
 let ssIndex = 0;
 
 function ssGo(idx) {

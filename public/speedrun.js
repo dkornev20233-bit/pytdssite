@@ -2,7 +2,7 @@
 //  pyTDS Speedrun — API version
 // ═══════════════════════════════════════
 
-const API = 'https://pytdssite-production.up.railway.app/api';
+const API = 'https://pytdssite-production-b100.up.railway.app/api';
 
 // ─── Init ───
 window.addEventListener('DOMContentLoaded', async () => {

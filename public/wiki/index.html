@@ -24,10 +24,16 @@
     </div>
     <div class="nav-section">
       <div class="nav-section-title">Towers</div>
-      <a href="towers.html" class="nav-link">🗼 All Towers</a>
+      <a href="towers.html" class="nav-link active">🗼 All Towers</a>
       <a href="tower-assassin.html" class="nav-link nav-sub">Assassin</a>
       <a href="tower-accelerator.html" class="nav-link nav-sub">Accelerator</a>
       <a href="tower-archer.html" class="nav-link nav-sub">Archer</a>
+      <a href="tower-cowboy.html" class="nav-link nav-sub">Cowboy</a>
+      <a href="tower-militant.html" class="nav-link nav-sub">Militant</a>
+      <a href="tower-twitgunner.html" class="nav-link nav-sub">Twitgunner</a>
+      <a href="tower-jester.html" class="nav-link nav-sub">Jester</a>
+      <a href="tower-swarmer.html" class="nav-link nav-sub">Swarmer</a>
+      <a href="tower-harvester.html" class="nav-link nav-sub">Harvester</a>
       <a href="tower-lifestealer.html" class="nav-link nav-sub">Lifestealer</a>
       <a href="tower-frostcelerator.html" class="nav-link nav-sub">Frostcelerator</a>
       <a href="tower-redball.html" class="nav-link nav-sub">Red Ball</a>
@@ -38,6 +44,13 @@
       <a href="tower-toxicgunner.html" class="nav-link nav-sub">Toxic Gunner</a>
       <a href="tower-slasher.html" class="nav-link nav-sub">Slasher</a>
       <a href="tower-farm.html" class="nav-link nav-sub">Farm</a>
+      <a href="tower-korzhik.html" class="nav-link nav-sub">Korzhik</a>
+      <a href="tower-commando.html" class="nav-link nav-sub">Commando</a>
+      <a href="tower-caster.html" class="nav-link nav-sub">Caster</a>
+      <a href="tower-warlock.html" class="nav-link nav-sub">Warlock</a>
+      <a href="tower-spotlighttech.html" class="nav-link nav-sub">Spotlight Tech</a>
+      <a href="tower-hallowpunk.html" class="nav-link nav-sub">Hallow Punk</a>
+      <a href="tower-snowballer.html" class="nav-link nav-sub">Snowballer</a>
       <a href="tower-xw5yt.html" class="nav-link nav-sub nav-exclusive">xw5yt ✦</a>
     </div>
     <div class="nav-section">
@@ -45,6 +58,7 @@
       <a href="enemies-easy.html" class="nav-link">🟢 Easy Enemies</a>
       <a href="enemies-fallen.html" class="nav-link">🟣 Fallen Enemies</a>
       <a href="enemies-frosty.html" class="nav-link">🔵 Frosty Enemies</a>
+      <a href="enemies-hardcore.html" class="nav-link">🔴 Hardcore Enemies</a>
     </div>
     <div class="nav-section">
       <div class="nav-section-title">Other</div>
@@ -80,22 +94,22 @@
       <a href="modes.html" class="home-card home-card-green">
         <div class="home-card-icon">🎮</div>
         <div class="home-card-title">Game Modes</div>
-        <div class="home-card-desc">Easy, Fallen, Frosty, Sandbox — rules, wave counts, final bosses</div>
+        <div class="home-card-desc">Easy, Fallen, Frosty, Hardcore, Sandbox — rules, wave counts, final bosses</div>
       </a>
       <a href="towers.html" class="home-card home-card-blue">
         <div class="home-card-icon">🗼</div>
         <div class="home-card-title">Towers</div>
-        <div class="home-card-desc">All 14 towers — stats, upgrade tables, mechanics</div>
+        <div class="home-card-desc">All 24+ towers — stats, upgrade tables, mechanics</div>
       </a>
       <a href="enemies-easy.html" class="home-card home-card-red">
         <div class="home-card-icon">👾</div>
         <div class="home-card-title">Enemies</div>
-        <div class="home-card-desc">Every enemy type across all three modes, HP, speed, abilities</div>
+        <div class="home-card-desc">Every enemy type across all modes, HP, speed, abilities</div>
       </a>
       <a href="achievements.html" class="home-card home-card-gold">
         <div class="home-card-icon">🏆</div>
         <div class="home-card-title">Achievements</div>
-        <div class="home-card-desc">All 7 achievements and how to unlock them</div>
+        <div class="home-card-desc">All achievements and how to unlock them</div>
       </a>
       <a href="multiplayer.html" class="home-card home-card-cyan">
         <div class="home-card-icon">🌐</div>
@@ -107,7 +121,7 @@
 
     <div class="wiki-section">
       <h2>About the game</h2>
-      <p>pyTDS is a <strong>Tower Defense</strong> game built entirely in Python using <strong>Pygame</strong>. Running at 1920×1080 and 60 FPS, it features four game modes, 14 unique tower types, 40+ enemy types across three distinct enemy rosters, a full co-op multiplayer system, persistent save files, and 7 unlockable achievements.</p>
+      <p>pyTDS is a <strong>Tower Defense</strong> game built entirely in Python using <strong>Pygame</strong>. Running at 1920×1080 and 60 FPS, it features five game modes, 24+ unique tower types, 40+ enemy types across multiple distinct enemy rosters, a full co-op multiplayer system, persistent save files, and many unlockable achievements.</p>
       <p>The game has no external engine — all rendering, physics, AI, and networking is hand-coded in Python.</p>
     </div>
 
@@ -120,6 +134,7 @@
             <tr><td><span class="badge badge-green">Easy</span></td><td>20</td><td>Grave Digger (5,000 HP)</td><td>★☆☆☆</td></tr>
             <tr><td><span class="badge badge-purple">Fallen</span></td><td>40</td><td>Fallen King (175,000 HP) / True Fallen King</td><td>★★★★</td></tr>
             <tr><td><span class="badge badge-blue">Frosty</span></td><td>40</td><td>Frost Spirit (500,000 HP)</td><td>★★★★</td></tr>
+            <tr><td><span class="badge" style="background:#ef4444;color:white">Hardcore</span></td><td>50</td><td>Void Reaver (1,200,000 HP)</td><td>★★★★★</td></tr>
             <tr><td><span class="badge badge-gold">Sandbox</span></td><td>∞</td><td>—</td><td>Free play</td></tr>
           </tbody>
         </table>
@@ -132,9 +147,11 @@
         <table class="wiki-table">
           <thead><tr><th>Map</th><th>Layout</th><th>Available in</th></tr></thead>
           <tbody>
-            <tr><td><strong>Straight</strong></td><td>Single horizontal path left → right</td><td>Easy, Fallen, Sandbox</td></tr>
-            <tr><td><strong>Zigzag</strong></td><td>Multi-segment path snaking across the screen</td><td>Easy, Fallen, Sandbox</td></tr>
+            <tr><td><strong>Straight</strong></td><td>Single horizontal path left → right</td><td>Easy, Fallen, Hardcore, Sandbox</td></tr>
+            <tr><td><strong>Zigzag</strong></td><td>Multi-segment path snaking across the screen</td><td>Easy, Fallen, Hardcore, Sandbox</td></tr>
             <tr><td><strong>Frosty</strong></td><td>4 lanes converging on center from all 4 edges</td><td>Frosty only</td></tr>
+            <tr><td><strong>U-Turn</strong></td><td>Path with multiple tight bends</td><td>Easy, Fallen, Hardcore, Sandbox</td></tr>
+            <tr><td><strong>Labyrinth</strong></td><td>Complex maze-like path</td><td>Easy, Fallen, Hardcore, Sandbox</td></tr>
           </tbody>
         </table>
       </div>

@@ -84,7 +84,7 @@
         <img src="assets/screenshot1.png" alt="Screenshot 1" id="ssMain"/>
         <button class="ss-arrow ss-prev" onclick="ssNav(-1)">&#8249;</button>
         <button class="ss-arrow ss-next" onclick="ssNav(1)">&#8250;</button>
-        <div class="ss-counter"><span id="ssCurrent">1</span> / 5</div>
+        <div class="ss-counter"><span id="ssCurrent">1</span> / 8</div>
       </div>
       <div class="ss-thumbs">
         <img src="assets/screenshot1.png" alt="1" class="ss-thumb active" onclick="ssGo(0)"/>
@@ -92,6 +92,9 @@
         <img src="assets/screenshot3.png" alt="3" class="ss-thumb" onclick="ssGo(2)"/>
         <img src="assets/screenshot4.png" alt="4" class="ss-thumb" onclick="ssGo(3)"/>
         <img src="assets/screenshot5.png" alt="5" class="ss-thumb" onclick="ssGo(4)"/>
+        <img src="assets/screenshot6.png" alt="6" class="ss-thumb" onclick="ssGo(5)"/>
+        <img src="assets/screenshot7.png" alt="7" class="ss-thumb" onclick="ssGo(6)"/>
+        <img src="assets/screenshot8.png" alt="8" class="ss-thumb" onclick="ssGo(7)"/>
       </div>
     </div>
   </div>
@@ -106,7 +109,7 @@
       <strong>pyTDS</strong> is a <span class="hl">Tower Defense</span> game built entirely in Python using Pygame.
       Place defensive towers on a 1920×1080 map, hold the line against escalating waves of enemies,
       earn coins from kills, and upgrade your defenses. Survive all waves — or challenge yourself with
-      <span class="hl">Fallen</span> and <span class="hl">Frosty</span> modes that push to 40 waves with brutal new enemy types.
+      <span class="hl">Fallen</span>, <span class="hl">Frosty</span> and <span class="hl">Hardcore</span> modes that push to 40-50 waves with brutal new enemy types.
     </p>
     <div class="cards reveal">
       <div class="card">
@@ -116,8 +119,8 @@
       </div>
       <div class="card">
         <div class="card-icon">🏰</div>
-        <div class="card-title">4 Game Modes</div>
-        <div class="card-desc">Easy (20 waves), Fallen (40 waves), Frosty (40 ice waves), and Sandbox. Each has a unique enemy roster and final boss.</div>
+        <div class="card-title">5 Game Modes</div>
+        <div class="card-desc">Easy (20 waves), Fallen (40 waves), Frosty (40 ice waves), Hardcore (50 waves), and Sandbox. Each has a unique enemy roster and final boss.</div>
       </div>
       <div class="card">
         <div class="card-icon">🌐</div>
@@ -146,7 +149,7 @@
         <div class="step-num">02</div>
         <div class="step-body">
           <div class="step-title">Place & upgrade towers</div>
-          <div class="step-desc">Choose from 14 tower types — Assassin, Accelerator, Archer, Lifestealer, Sledger, Gladiator, Slasher and more. Each has up to 6 upgrade levels.</div>
+          <div class="step-desc">Choose from 24 tower types — Assassin, Accelerator, Archer, Militant, Cowboy, Swarmer, Harvester and more. Each has up to 6 upgrade levels.</div>
         </div>
       </div>
       <div class="step-line reveal"></div>
@@ -166,22 +169,20 @@
   <div class="container section-inner">
     <div class="section-tag reveal">// towers</div>
     <h2 class="section-title reveal">Tower roster</h2>
-    <p class="section-text reveal">14 unique towers, each with distinct mechanics and up to 6 upgrade levels.</p>
+    <p class="section-text reveal">24 unique towers, each with distinct mechanics and up to 6 upgrade levels.</p>
     <div class="tower-grid reveal">
-      <div class="tower-card"><div class="tower-header"><div class="tower-name">Assassin</div><div class="tower-cost">300 💰</div></div><div class="tower-desc">Single-target melee. Whirlwind AoE at lv2. Hidden detection at lv1. Max 5.</div><div class="tower-stats"><span class="tstat">DMG 4.5→28.5</span><span class="tstat">5 levels</span></div></div>
-      <div class="tower-card"><div class="tower-header"><div class="tower-name">Accelerator</div><div class="tower-cost">5000 💰</div></div><div class="tower-desc">Purple laser beam. Dual target at lv4+. Hidden detection at lv1. Max 5.</div><div class="tower-stats"><span class="tstat">DMG 12→36</span><span class="tstat">6 levels</span></div></div>
-      <div class="tower-card"><div class="tower-header"><div class="tower-name">Archer</div><div class="tower-cost">400 💰</div></div><div class="tower-desc">Homing pierce arrows. Flame/Ice modes. Hidden detection at lv4. Max 4.</div><div class="tower-stats"><span class="tstat">Pierce 2→6</span><span class="tstat">6 levels</span></div></div>
-      <div class="tower-card"><div class="tower-header"><div class="tower-name">Lifestealer</div><div class="tower-cost">400 💰</div></div><div class="tower-desc">Earns bonus coins equal to 10–45% of enemy max HP on kill. Max 4.</div><div class="tower-stats"><span class="tstat">Economy</span><span class="tstat">6 levels</span></div></div>
-      <div class="tower-card"><div class="tower-header"><div class="tower-name">Frostcelerator</div><div class="tower-cost">3500 💰</div></div><div class="tower-desc">Ice laser hitting 4 targets. Slows 25%, freezes after 1000 cumulative dmg. Max 1.</div><div class="tower-stats"><span class="tstat">Slow + Freeze</span><span class="tstat">5 levels</span></div></div>
-      <div class="tower-card"><div class="tower-header"><div class="tower-name">Red Ball</div><div class="tower-cost">1000 💰</div></div><div class="tower-desc">Physically leaps at enemies. Tracks live position. Hidden detection at lv2. Max 4.</div><div class="tower-stats"><span class="tstat">DMG 15→150</span><span class="tstat">5 levels</span></div></div>
-      <div class="tower-card"><div class="tower-header"><div class="tower-name">Freezer</div><div class="tower-cost">400 💰</div></div><div class="tower-desc">Homing ice bullets that slow 5–15% for 3–5 seconds. Max 6.</div><div class="tower-stats"><span class="tstat">Slow</span><span class="tstat">5 levels</span></div></div>
-      <div class="tower-card"><div class="tower-header"><div class="tower-name">Frost Blaster</div><div class="tower-cost">800 💰</div></div><div class="tower-desc">Piercing ice bullet. Armor shred at lv2. Defense drop at lv4. Max 14.</div><div class="tower-stats"><span class="tstat">Pierce + Armor</span><span class="tstat">5 levels</span></div></div>
-      <div class="tower-card"><div class="tower-header"><div class="tower-name">Sledger</div><div class="tower-cost">950 💰</div></div><div class="tower-desc">AoE hammer swing. Slow ramp → freeze (lv3). Double dmg frozen (lv4). Max 6.</div><div class="tower-stats"><span class="tstat">AoE + Freeze</span><span class="tstat">6 levels</span></div></div>
-      <div class="tower-card"><div class="tower-header"><div class="tower-name">Gladiator</div><div class="tower-cost">500 💰</div></div><div class="tower-desc">180° sword arc hitting up to 10 enemies. Hidden detection at lv2. Max 2.</div><div class="tower-stats"><span class="tstat">AoE Melee</span><span class="tstat">6 levels</span></div></div>
-      <div class="tower-card"><div class="tower-header"><div class="tower-name">Toxic Gunner</div><div class="tower-cost">525 💰</div></div><div class="tower-desc">Burst fire with poison DoT + slow stacks + armor reduction. Max 3.</div><div class="tower-stats"><span class="tstat">Poison + Slow</span><span class="tstat">5 levels</span></div></div>
-      <div class="tower-card"><div class="tower-header"><div class="tower-name">Slasher</div><div class="tower-cost">1700 💰</div></div><div class="tower-desc">Crit every 3rd hit (×1.75→×4.0). Bleed stacks 0.5% max HP/tick at lv2+. Max 3.</div><div class="tower-stats"><span class="tstat">Crit + Bleed</span><span class="tstat">5 levels</span></div></div>
-      <div class="tower-card"><div class="tower-header"><div class="tower-name">Farm</div><div class="tower-cost">250 💰</div></div><div class="tower-desc">Passive income 50→1600 coins per wave. No attack. Max 8.</div><div class="tower-stats"><span class="tstat">Economy</span><span class="tstat">6 levels</span></div></div>
-      <div class="tower-card tower-card-exclusive"><div class="tower-header"><div class="tower-name">xw5yt <span class="excl-badge">EXCLUSIVE</span></div><div class="tower-cost">5000 💰</div></div><div class="tower-desc">Green laser with 3 unique abilities. Sandbox only. Max 1.</div><div class="tower-stats"><span class="tstat">Sandbox Only</span><span class="tstat">6 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Assassin</div><div class="tower-cost">300 💰</div></div><div class="tower-desc">Silent but deadly. Clear out enemies with fatal stabs, whirlwind slashes, and throwing knives!</div><div class="tower-stats"><span class="tstat">DMG 4.5→28.5</span><span class="tstat">5 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Accelerator</div><div class="tower-cost">5000 💰</div></div><div class="tower-desc">Charge a laser and release massive damage at deadly rates!</div><div class="tower-stats"><span class="tstat">DMG 12→36</span><span class="tstat">6 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Archer</div><div class="tower-cost">400 💰</div></div><div class="tower-desc">Shoot a piercing arrow that bounces towards nearby enemies. Pick between Fire, Stun, & EXP arrows.</div><div class="tower-stats"><span class="tstat">Pierce 2→6</span><span class="tstat">6 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Cowboy</div><div class="tower-cost">550 💰</div></div><div class="tower-desc">There ain't enough room for the two of us pardner... Gain cash on reload.</div><div class="tower-stats"><span class="tstat">Economy + Attack</span><span class="tstat">6 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Militant</div><div class="tower-cost">600 💰</div></div><div class="tower-desc">Trained with an assault rifle, this tower deals medium damage at a fast firerate.</div><div class="tower-stats"><span class="tstat">Starter</span><span class="tstat">6 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Jester</div><div class="tower-cost">FREE 💰</div></div><div class="tower-desc">I have a ton of tricks in my pockets! Cycle through and throw debuff bombs at enemies!</div><div class="tower-stats"><span class="tstat">Debuffs</span><span class="tstat">6 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Swarmer</div><div class="tower-cost">900 💰</div></div><div class="tower-desc">OH NOES, THE BEES! Attack enemies with bees that do damage over time.</div><div class="tower-stats"><span class="tstat">DoT</span><span class="tstat">6 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Harvester</div><div class="tower-cost">5000 💰</div></div><div class="tower-desc">A haunted scarecrow that fires piercing bolts and can summon thorns to slow enemies.</div><div class="tower-stats"><span class="tstat">Epic</span><span class="tstat">6 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Gladiator</div><div class="tower-cost">450 💰</div></div><div class="tower-desc">Slash nearby enemies, deal area damage, and parry incoming attacks!</div><div class="tower-stats"><span class="tstat">AoE Melee</span><span class="tstat">6 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Red Ball</div><div class="tower-cost">1250 💰</div></div><div class="tower-desc">Bounces at enemies dealing high single target damage. Korzhik's tower.</div><div class="tower-stats"><span class="tstat">DMG 12→100</span><span class="tstat">5 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Farm</div><div class="tower-cost">250 💰</div></div><div class="tower-desc">Earn extra cash per wave. The higher the upgrade, the higher the income.</div><div class="tower-stats"><span class="tstat">Economy</span><span class="tstat">6 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Korzhik</div><div class="tower-cost">1500 💎</div></div><div class="tower-desc">Mythic tower. Spawns debuff circles and has orbiting spheres that deal damage.</div><div class="tower-stats"><span class="tstat">Mythic</span><span class="tstat">6 levels</span></div></div>
     </div>
   </div>
 </section>
@@ -192,13 +193,13 @@
     <div class="section-tag reveal">// features</div>
     <h2 class="section-title reveal">What's inside</h2>
     <div class="feat-grid reveal">
-      <div class="feat-item"><span class="feat-dot"></span>4 game modes — Easy, Fallen, Frosty, Sandbox</div>
-      <div class="feat-item"><span class="feat-dot"></span>14 unique towers with up to 6 upgrade levels</div>
+      <div class="feat-item"><span class="feat-dot"></span>5 game modes — Easy, Fallen, Frosty, Hardcore, Sandbox</div>
+      <div class="feat-item"><span class="feat-dot"></span>24 unique towers with up to 6 upgrade levels</div>
       <div class="feat-item"><span class="feat-dot"></span>40+ enemy types across all modes</div>
       <div class="feat-item"><span class="feat-dot"></span>Multiplayer co-op (LAN + ngrok support)</div>
-      <div class="feat-item"><span class="feat-dot"></span>Three map layouts — Straight, Zigzag, Frosty</div>
+      <div class="feat-item"><span class="feat-dot"></span>Five map layouts — Straight, Zigzag, Frosty, U-Turn, Labyrinth</div>
       <div class="feat-item"><span class="feat-dot"></span>Persistent save system (savegame.json)</div>
-      <div class="feat-item"><span class="feat-dot"></span>7 unlockable achievements</div>
+      <div class="feat-item"><span class="feat-dot"></span>16+ unlockable achievements</div>
       <div class="feat-item"><span class="feat-dot"></span>Floating damage text and visual effects</div>
       <div class="feat-item"><span class="feat-dot"></span>Runs at 60 FPS on 1920×1080</div>
       <div class="feat-item"><span class="feat-dot"></span>Lightweight — no engine, pure Pygame</div>

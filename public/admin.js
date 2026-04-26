@@ -2,7 +2,7 @@
 //  pyTDS Admin Panel — API version
 // ═══════════════════════════════════════
 
-const API = 'https://pytdssite-production.up.railway.app/api';
+const API = 'https://pytdssite-production-b100.up.railway.app/api';
 let currentRejectId = null;
 
 // ─── Init ───

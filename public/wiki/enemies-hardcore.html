@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Accelerator — pyTDS Wiki</title><link rel="stylesheet" href="wiki.css"></head>
+<title>Hardcore Enemies — pyTDS Wiki</title><link rel="stylesheet" href="wiki.css"></head>
 <body><aside class="sidebar" id="sidebar">
   <div class="sidebar-logo"><span class="logo-py">py</span><span class="logo-tds">TDS</span><span class="logo-wiki">Wiki</span></div>
   <nav class="sidebar-nav">
@@ -11,14 +11,14 @@
 <a href="enemies-easy.html" class="nav-link ">🟢 Easy Enemies</a>
 <a href="enemies-fallen.html" class="nav-link ">🟣 Fallen Enemies</a>
 <a href="enemies-frosty.html" class="nav-link ">🔵 Frosty Enemies</a>
-<a href="enemies-hardcore.html" class="nav-link ">🔴 Hardcore Enemies</a>
+<a href="enemies-hardcore.html" class="nav-link active">🔴 Hardcore Enemies</a>
 <a href="achievements.html" class="nav-link ">🏆 Achievements</a>
 <a href="multiplayer.html" class="nav-link ">🌐 Multiplayer</a>
 </div>
     <div class="nav-section">
       <div class="nav-section-title">Towers</div>
       <a href="tower-assassin.html" class="nav-link nav-sub">Assassin</a>
-<a href="tower-accelerator.html" class="nav-link nav-sub active">Accelerator</a>
+<a href="tower-accelerator.html" class="nav-link nav-sub ">Accelerator</a>
 <a href="tower-archer.html" class="nav-link nav-sub ">Archer</a>
 <a href="tower-cowboy.html" class="nav-link nav-sub ">Cowboy</a>
 <a href="tower-militant.html" class="nav-link nav-sub ">Militant</a>
@@ -51,7 +51,7 @@
 <main class="main">
   <div class="topbar">
     <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
-    <div class="breadcrumb">pyTDS Wiki / Towers / <span>Accelerator</span></div>
+    <div class="breadcrumb">pyTDS Wiki / Enemies / <span>Hardcore</span></div>
     <div class="topbar-right"><div class="search-wrap">
       <input type="text" id="searchInput" class="search" placeholder="Search wiki..." oninput="doSearch(this.value)" onkeydown="if(event.key==='Escape')clearSearch()"/>
       <div class="search-results hidden" id="searchResults"></div>
@@ -59,21 +59,65 @@
   </div>
   <article class="content">
     <div class="page-header">
-      <h1 class="page-title">Accelerator </h1>
+      <h1 class="page-title">Hardcore Enemies 🔴</h1>
+      <p class="page-subtitle">The most dangerous entities encountered in Hardcore Mode.</p>
     </div>
-    <div class="tower-hero">
-      <div class="tower-hero-icon" style="background:rgba(130,60,255,0.25);font-size:32px">⚡</div>
-      <div class="tower-hero-info">
-        <div class="tower-hero-name">Accelerator</div>
-        <div class="tower-hero-meta">
-          <div class="tower-hero-stat">Cost <strong>5000 💰</strong></div>
-          <div class="tower-hero-stat">Max on field <strong>5</strong></div>
-          <div class="tower-hero-stat">Upgrade levels <strong>6</strong></div>
+
+    <div class="wiki-section">
+      <div class="enemy-card">
+        <div class="enemy-header">
+          <div class="enemy-icon" style="background:#4b5563">🛡️</div>
+          <div class="enemy-info">
+            <h3 class="enemy-name">Heavy Tank</h3>
+            <div class="enemy-stats">❤️ 5,000 HP | ⚡ Slow | 💰 $500</div>
+          </div>
         </div>
+        <p class="enemy-desc">A massive armored vehicle with high HP. Requires sustained high DPS to take down.</p>
       </div>
-    </div><div class="wiki-section"><h2>Upgrade table</h2>
-    <div class="upgrade-table-wrap"><table class="upgrade-table">
-      <thead><tr><th>Level</th><th>Cost</th><th>DMG</th><th>Firerate (s)</th><th>Range (tiles)</th><th>Dual Laser</th><th>Hidden Det.</th></tr></thead>
-      <tbody><tr><td><span class='lv-badge lv-place'>Place</span></td><td class="cost-cell">5000</td><td>12</td><td>0.208</td><td>7.0</td><td>No</td><td>No</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 1</span></td><td class="cost-cell">2000</td><td>15</td><td>0.208</td><td>7.0</td><td>No</td><td>✅ Yes</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 2</span></td><td class="cost-cell">4500</td><td>25</td><td>0.208</td><td>7.0</td><td>No</td><td>✅ Yes</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 3</span></td><td class="cost-cell">10000</td><td>32</td><td>0.208</td><td>8.5</td><td>No</td><td>✅ Yes</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 4</span></td><td class="cost-cell">17000</td><td>34</td><td>0.158</td><td>9.5</td><td>✅ Yes</td><td>✅ Yes</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 5</span></td><td class="cost-cell">27000</td><td>36</td><td>0.108</td><td>11.0</td><td>✅ Yes</td><td>✅ Yes</td></tr></tbody>
-    </table></div></div><div class="wiki-section"><h2>Mechanics</h2><p>Fires a continuous <strong>purple laser beam</strong> at the furthest enemy in range.</p><ul><li>At <strong>Lv1</strong> gains <strong>Hidden Detection</strong>.</li><li>At <strong>Lv4–5</strong> fires a <strong>dual laser</strong> — hits 2 targets simultaneously.</li><li>Range was recently increased on Lv3-5 for better late-game performance.</li><li>Very high DPS — one of the top single-target damage towers in the game.</li></ul></div><div class="wiki-section"><h2>Tips</h2><ul><li>Best in mid-to-late game due to high placement cost.</li><li>Lv4–5 dual laser significantly increases total damage output.</li><li>Max 5 on field — even 2–3 Accelerators cover most situations.</li><li>Does not pierce — use Frost Blaster or Archer for multi-enemy coverage.</li></ul></div></article>
+
+      <div class="enemy-card">
+        <div class="enemy-header">
+          <div class="enemy-icon" style="background:#10b981">⚡</div>
+          <div class="enemy-info">
+            <h3 class="enemy-name">Circuit</h3>
+            <div class="enemy-stats">❤️ 800 HP | ⚡ Very Fast | 💰 $150</div>
+          </div>
+        </div>
+        <p class="enemy-desc">Extremely fast enemy that can easily leak if your defense lacks slowing or fast-firing towers.</p>
+      </div>
+
+      <div class="enemy-card">
+        <div class="enemy-header">
+          <div class="enemy-icon" style="background:#ef4444">🏥</div>
+          <div class="enemy-info">
+            <h3 class="enemy-name">Patient</h3>
+            <div class="enemy-stats">❤️ 1,200 HP | ⚡ Normal | 💰 $200</div>
+          </div>
+        </div>
+        <p class="enemy-desc">An enemy that can heal nearby allies, making groups significantly harder to clear.</p>
+      </div>
+
+      <div class="enemy-card">
+        <div class="enemy-header">
+          <div class="enemy-icon" style="background:#7c3aed">👻</div>
+          <div class="enemy-info">
+            <h3 class="enemy-name">Soul / Shadow</h3>
+            <div class="enemy-stats">❤️ 400 HP | ⚡ Fast | 💰 $100</div>
+          </div>
+        </div>
+        <p class="enemy-desc">Insubstantial enemies that are often Hidden. Requires Hidden Detection to target.</p>
+      </div>
+
+      <div class="enemy-card">
+        <div class="enemy-header">
+          <div class="enemy-icon" style="background:#000000; color:white; border:1px solid #7c3aed">💀</div>
+          <div class="enemy-info">
+            <h3 class="enemy-name">Void Reaver</h3>
+            <div class="enemy-stats">❤️ 1,200,000 HP | ⚡ Boss | 💰 ???</div>
+          </div>
+        </div>
+        <p class="enemy-desc"><strong>Final Boss of Hardcore Mode.</strong> An eldritch horror with immense HP and devastating abilities. Only the strongest defenses can survive its arrival.</p>
+      </div>
+    </div>
+  </article>
 </main><script src="wiki.js"></script></body></html>
