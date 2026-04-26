@@ -140,38 +140,39 @@
     </div>
     <div class="wiki-section" id="tvz">
       <h2>Towers vs Zombies (Event) <span style="color:var(--gold); font-size:16px;">(Sandbox Exclusive)</span></h2>
-      <p>Ивент «Towers vs Zombies» (или сокращенно TvZ, вдохновленный жанром Plants vs. Zombies) — это уникальный режим, доступный исключительно через админ-панель в режиме Sandbox.</p>
+      <p>The "Towers vs Zombies" event (or TvZ for short, inspired by the Plants vs. Zombies genre) is a unique mode accessible exclusively through the admin panel in Sandbox mode.</p>
       
-      <h3>1. Структура игрового поля</h3>
-      <p>В отличие от стандартных карт с извилистыми путями, этот режим полностью меняет геометрию уровня:</p>
+      <h3>1. Board Structure</h3>
+      <p>Unlike standard maps with winding paths, this mode completely changes the level geometry:</p>
       <ul>
-        <li><strong>Сетка 5×9</strong>: Игровое поле делится на 5 горизонтальных рядов и 9 колонок.</li>
-        <li><strong>Прямые пути</strong>: В каждом из 5 рядов враги движутся по строго горизонтальной линии справа налево.</li>
-        <li><strong>Зоны размещения</strong>: Юниты (башни) размещаются в ячейках этой сетки, защищая свои линии.</li>
+        <li><strong>5×9 Grid</strong>: The playing field is divided into 5 horizontal rows and 9 columns.</li>
+        <li><strong>Straight Paths</strong>: In each of the 5 rows, enemies move in a strictly horizontal line from right to left.</li>
+        <li><strong>Placement Zones</strong>: Units (towers) are placed in the cells of this grid, defending their lanes.</li>
       </ul>
 
-      <h3>2. Особенности экономики и волн</h3>
-      <p>Режим имеет уникальные настройки прогрессии:</p>
+      <h3>2. Economy and Waves</h3>
+      <p>The mode features unique progression settings:</p>
       <ul>
-        <li><strong>Стартовый бюджет</strong>: Игроку выдается фиксированная сумма $500.</li>
-        <li><strong>Отсутствие наград за убийство</strong>: В этом режиме за уничтожение зомби не начисляются деньги (lmoney и bmoney равны 0), что заставляет игрока стратегически использовать начальный капитал.</li>
-        <li><strong>Количество волн</strong>: Ивент состоит из 10 волн нарастающей сложности.</li>
+        <li><strong>Starting Budget</strong>: The player is given a fixed amount of $500.</li>
+        <li><strong>No Kill Rewards</strong>: In this mode, no money is awarded for killing zombies (lmoney and bmoney are 0), forcing the player to strategically use their initial capital.</li>
+        <li><strong>Wave Count</strong>: The event consists of 10 waves of increasing difficulty.</li>
       </ul>
 
-      <h3>3. Состав волн (WAVE_DATA)</h3>
-      <p>Пример прогрессии врагов в ивенте:</p>
+      <h3>3. Wave Composition (WAVE_DATA)</h3>
+      <p>Example of enemy progression in the event:</p>
       <ul>
-        <li><strong>Волны 1–3</strong>: Только обычные зомби (от 1 до 3 штук).</li>
-        <li><strong>Волна 5</strong>: Группа из BucketZombie (2), обычных зомби (3) и Conehead (2).</li>
-        <li><strong>Волна 8</strong>: Усиленный отряд: Bucket (5), Normal (5), Conehead (5) и Football (3).</li>
-        <li><strong>Волна 10</strong>: Финальное испытание с участием самых мощных юнитов.</li>
+        <li><strong>Waves 1–3</strong>: Only normal zombies (1 to 3 units).</li>
+        <li><strong>Wave 5</strong>: A group of BucketZombies (2), normal zombies (3), and Coneheads (2).</li>
+        <li><strong>Wave 8</strong>: A reinforced squad: Bucket (5), Normal (5), Conehead (5), and Football (3).</li>
+        <li><strong>Wave 10</strong>: The final challenge featuring the most powerful units.</li>
       </ul>
 
-      <h3>Как запустить:</h3>
-      <div class="info-box">Поскольку ивент скрыт, он активируется только в режиме Sandbox через меню администратора (Admin Panel) или специальные отладочные команды, которые переключают CURRENT_MAP на сетку TvZ и загружают TVZ_WAVE_DATA.</div>
+      <h3>How to launch:</h3>
+      <div class="info-box">Since the event is hidden, it can only be activated in Sandbox mode via the Admin Panel or special debug commands that switch CURRENT_MAP to the TvZ grid and load TVZ_WAVE_DATA.</div>
     </div>
   </article>
 </main>
 <script src="wiki.js"></script>
+<script src="../lang.js"></script>
 </body>
 </html>
