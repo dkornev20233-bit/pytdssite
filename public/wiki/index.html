@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pyTDS Wiki</title>
+<link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+
+<!-- ═══ SIDEBAR ═══ -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <span class="logo-py">py</span><span class="logo-tds">TDS</span>
+    <span class="logo-wiki">Wiki</span>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <div class="nav-section-title">Getting Started</div>
+      <a href="index.html" class="nav-link active">🏠 Home</a>
+      <a href="modes.html" class="nav-link">🎮 Game Modes</a>
+      <a href="maps.html" class="nav-link">🗺️ Maps</a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-title">Towers</div>
+      <a href="towers.html" class="nav-link">🗼 All Towers</a>
+      <a href="tower-assassin.html" class="nav-link nav-sub">Assassin</a>
+      <a href="tower-accelerator.html" class="nav-link nav-sub">Accelerator</a>
+      <a href="tower-archer.html" class="nav-link nav-sub">Archer</a>
+      <a href="tower-lifestealer.html" class="nav-link nav-sub">Lifestealer</a>
+      <a href="tower-frostcelerator.html" class="nav-link nav-sub">Frostcelerator</a>
+      <a href="tower-redball.html" class="nav-link nav-sub">Red Ball</a>
+      <a href="tower-freezer.html" class="nav-link nav-sub">Freezer</a>
+      <a href="tower-frostblaster.html" class="nav-link nav-sub">Frost Blaster</a>
+      <a href="tower-sledger.html" class="nav-link nav-sub">Sledger</a>
+      <a href="tower-gladiator.html" class="nav-link nav-sub">Gladiator</a>
+      <a href="tower-toxicgunner.html" class="nav-link nav-sub">Toxic Gunner</a>
+      <a href="tower-slasher.html" class="nav-link nav-sub">Slasher</a>
+      <a href="tower-farm.html" class="nav-link nav-sub">Farm</a>
+      <a href="tower-xw5yt.html" class="nav-link nav-sub nav-exclusive">xw5yt ✦</a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-title">Enemies</div>
+      <a href="enemies-easy.html" class="nav-link">🟢 Easy Enemies</a>
+      <a href="enemies-fallen.html" class="nav-link">🟣 Fallen Enemies</a>
+      <a href="enemies-frosty.html" class="nav-link">🔵 Frosty Enemies</a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-title">Other</div>
+      <a href="achievements.html" class="nav-link">🏆 Achievements</a>
+      <a href="multiplayer.html" class="nav-link">🌐 Multiplayer</a>
+      <a href="console.html" class="nav-link">💻 Console Commands</a>
+    </div>
+  </nav>
+
+  <a href="../index.html" class="sidebar-main-link" target="_blank">← Main Site</a>
+</aside>
+
+<!-- ═══ MAIN ═══ -->
+<main class="main">
+  <div class="topbar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="breadcrumb">pyTDS Wiki / <span>Home</span></div>
+    <div class="topbar-right">
+      <div class="search-wrap">
+        <input type="text" id="searchInput" class="search" placeholder="Search wiki..." oninput="doSearch(this.value)" onkeydown="if(event.key==='Escape')clearSearch()"/>
+        <div class="search-results hidden" id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+
+  <article class="content">
+    <div class="page-header">
+      <h1 class="page-title">pyTDS Wiki</h1>
+      <p class="page-sub">The complete reference for the Python Tower Defense game</p>
+    </div>
+
+    <div class="home-cards">
+      <a href="modes.html" class="home-card home-card-green">
+        <div class="home-card-icon">🎮</div>
+        <div class="home-card-title">Game Modes</div>
+        <div class="home-card-desc">Easy, Fallen, Frosty, Sandbox — rules, wave counts, final bosses</div>
+      </a>
+      <a href="towers.html" class="home-card home-card-blue">
+        <div class="home-card-icon">🗼</div>
+        <div class="home-card-title">Towers</div>
+        <div class="home-card-desc">All 14 towers — stats, upgrade tables, mechanics</div>
+      </a>
+      <a href="enemies-easy.html" class="home-card home-card-red">
+        <div class="home-card-icon">👾</div>
+        <div class="home-card-title">Enemies</div>
+        <div class="home-card-desc">Every enemy type across all three modes, HP, speed, abilities</div>
+      </a>
+      <a href="achievements.html" class="home-card home-card-gold">
+        <div class="home-card-icon">🏆</div>
+        <div class="home-card-title">Achievements</div>
+        <div class="home-card-desc">All 7 achievements and how to unlock them</div>
+      </a>
+      <a href="multiplayer.html" class="home-card home-card-cyan">
+        <div class="home-card-icon">🌐</div>
+        <div class="home-card-title">Multiplayer</div>
+        <div class="home-card-desc">Co-op setup guide — LAN, ngrok, how host & client work</div>
+      </a>
+
+    </div>
+
+    <div class="wiki-section">
+      <h2>About the game</h2>
+      <p>pyTDS is a <strong>Tower Defense</strong> game built entirely in Python using <strong>Pygame</strong>. Running at 1920×1080 and 60 FPS, it features four game modes, 14 unique tower types, 40+ enemy types across three distinct enemy rosters, a full co-op multiplayer system, persistent save files, and 7 unlockable achievements.</p>
+      <p>The game has no external engine — all rendering, physics, AI, and networking is hand-coded in Python.</p>
+    </div>
+
+    <div class="wiki-section">
+      <h2>Quick reference</h2>
+      <div class="quick-table-wrap">
+        <table class="wiki-table">
+          <thead><tr><th>Mode</th><th>Waves</th><th>Final Boss</th><th>Difficulty</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge badge-green">Easy</span></td><td>20</td><td>Grave Digger (5,000 HP)</td><td>★☆☆☆</td></tr>
+            <tr><td><span class="badge badge-purple">Fallen</span></td><td>40</td><td>Fallen King (175,000 HP) / True Fallen King</td><td>★★★★</td></tr>
+            <tr><td><span class="badge badge-blue">Frosty</span></td><td>40</td><td>Frost Spirit (500,000 HP)</td><td>★★★★</td></tr>
+            <tr><td><span class="badge badge-gold">Sandbox</span></td><td>∞</td><td>—</td><td>Free play</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="wiki-section">
+      <h2>Maps</h2>
+      <div class="quick-table-wrap">
+        <table class="wiki-table">
+          <thead><tr><th>Map</th><th>Layout</th><th>Available in</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Straight</strong></td><td>Single horizontal path left → right</td><td>Easy, Fallen, Sandbox</td></tr>
+            <tr><td><strong>Zigzag</strong></td><td>Multi-segment path snaking across the screen</td><td>Easy, Fallen, Sandbox</td></tr>
+            <tr><td><strong>Frosty</strong></td><td>4 lanes converging on center from all 4 edges</td><td>Frosty only</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </article>
+</main>
+
+<script src="wiki.js"></script>
+</body>
+</html>

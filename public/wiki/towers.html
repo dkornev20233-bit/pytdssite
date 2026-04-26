@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Towers — pyTDS Wiki</title>
+<link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><span class="logo-py">py</span><span class="logo-tds">TDS</span><span class="logo-wiki">Wiki</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <div class="nav-section-title">Getting Started</div>
+      <a href="index.html" class="nav-link ">🏠 Home</a>
+      <a href="modes.html" class="nav-link ">🎮 Game Modes</a>
+      <a href="maps.html" class="nav-link ">🗺️ Maps</a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-title">Towers</div>
+      <a href="towers.html" class="nav-link active">🗼 All Towers</a>
+      <a href="tower-assassin.html" class="nav-link nav-sub ">Assassin</a>
+      <a href="tower-accelerator.html" class="nav-link nav-sub ">Accelerator</a>
+      <a href="tower-archer.html" class="nav-link nav-sub ">Archer</a>
+      <a href="tower-lifestealer.html" class="nav-link nav-sub ">Lifestealer</a>
+      <a href="tower-frostcelerator.html" class="nav-link nav-sub ">Frostcelerator</a>
+      <a href="tower-redball.html" class="nav-link nav-sub ">Red Ball</a>
+      <a href="tower-freezer.html" class="nav-link nav-sub ">Freezer</a>
+      <a href="tower-frostblaster.html" class="nav-link nav-sub ">Frost Blaster</a>
+      <a href="tower-sledger.html" class="nav-link nav-sub ">Sledger</a>
+      <a href="tower-gladiator.html" class="nav-link nav-sub ">Gladiator</a>
+      <a href="tower-toxicgunner.html" class="nav-link nav-sub ">Toxic Gunner</a>
+      <a href="tower-slasher.html" class="nav-link nav-sub ">Slasher</a>
+      <a href="tower-farm.html" class="nav-link nav-sub ">Farm</a>
+      <a href="tower-xw5yt.html" class="nav-link nav-sub nav-exclusive ">xw5yt ✦</a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-title">Enemies</div>
+      <a href="enemies-easy.html" class="nav-link ">🟢 Easy Enemies</a>
+      <a href="enemies-fallen.html" class="nav-link ">🟣 Fallen Enemies</a>
+      <a href="enemies-frosty.html" class="nav-link ">🔵 Frosty Enemies</a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-title">Other</div>
+      <a href="achievements.html" class="nav-link ">🏆 Achievements</a>
+      <a href="multiplayer.html" class="nav-link ">🌐 Multiplayer</a>
+          </div>
+  </nav>
+  <a href="../index.html" class="sidebar-main-link" target="_blank">← Main Site</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="breadcrumb">pyTDS Wiki / <span>Towers</span></div>
+    <div class="topbar-right">
+      <div class="search-wrap">
+        <input type="text" id="searchInput" class="search" placeholder="Search wiki..." oninput="doSearch(this.value)" onkeydown="if(event.key==='Escape')clearSearch()"/>
+        <div class="search-results hidden" id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+  <article class="content">
+    <div class="page-header">
+      <h1 class="page-title">Towers</h1>
+      <p class="page-sub">14 unique towers — click any for full stats and upgrade tables</p>
+    </div>
+    <div class="wiki-section">
+      <div class="quick-table-wrap">
+        <table class="wiki-table">
+          <thead><tr><th>Tower</th><th>Cost</th><th>Max</th><th>Levels</th><th>Special</th></tr></thead>
+          <tbody>
+            <tr><td><a href="tower-assassin.html"><strong>Assassin</strong></a></td><td class="cost-cell">300</td><td>5</td><td>5</td><td>Whirlwind AoE (lv2), Hidden det. (lv1)</td></tr>
+            <tr><td><a href="tower-accelerator.html"><strong>Accelerator</strong></a></td><td class="cost-cell">5000</td><td>5</td><td>6</td><td>Laser beam, dual-target (lv5+), Hidden det. (lv1)</td></tr>
+            <tr><td><a href="tower-archer.html"><strong>Archer</strong></a></td><td class="cost-cell">400</td><td>4</td><td>6</td><td>Pierce arrows, Flame/Ice modes, Hidden det. (lv4)</td></tr>
+            <tr><td><a href="tower-lifestealer.html"><strong>Lifestealer</strong></a></td><td class="cost-cell">400</td><td>4</td><td>6</td><td>Earns bonus coins from kills (10–45% of max HP)</td></tr>
+            <tr><td><a href="tower-frostcelerator.html"><strong>Frostcelerator</strong></a></td><td class="cost-cell">3500</td><td>1</td><td>5</td><td>Hits 4 targets, slows 25%, freezes after 1000 dmg</td></tr>
+            <tr><td><a href="tower-redball.html"><strong>Red Ball</strong></a></td><td class="cost-cell">1000</td><td>4</td><td>5</td><td>Physically leaps at enemies, Hidden det. (lv2)</td></tr>
+            <tr><td><a href="tower-freezer.html"><strong>Freezer</strong></a></td><td class="cost-cell">400</td><td>6</td><td>5</td><td>Bullets slow 5–15% for 3–5s</td></tr>
+            <tr><td><a href="tower-frostblaster.html"><strong>Frost Blaster</strong></a></td><td class="cost-cell">800</td><td>14</td><td>5</td><td>Piercing ice bullet, armor shred (lv2), defense drop (lv4)</td></tr>
+            <tr><td><a href="tower-sledger.html"><strong>Sledger</strong></a></td><td class="cost-cell">950</td><td>6</td><td>6</td><td>AoE hammer swing, slow ramp, freeze (lv3), aftershock (lv5)</td></tr>
+            <tr><td><a href="tower-gladiator.html"><strong>Gladiator</strong></a></td><td class="cost-cell">500</td><td>2</td><td>6</td><td>180° arc melee, Hidden det. (lv2)</td></tr>
+            <tr><td><a href="tower-toxicgunner.html"><strong>Toxic Gunner</strong></a></td><td class="cost-cell">525</td><td>3</td><td>5</td><td>Poison DoT + slow + armor reduction stacks</td></tr>
+            <tr><td><a href="tower-slasher.html"><strong>Slasher</strong></a></td><td class="cost-cell">1700</td><td>3</td><td>5</td><td>Crit rhythm, bleed stacks (lv2), Hidden det. (lv1)</td></tr>
+            <tr><td><a href="tower-farm.html"><strong>Farm</strong></a></td><td class="cost-cell">250</td><td>8</td><td>6</td><td>Passive income 50–1600 coins per wave</td></tr>
+            <tr><td><a href="tower-xw5yt.html"><strong>xw5yt</strong> <span class="badge badge-exc">EXCLUSIVE</span></a></td><td class="cost-cell">5000</td><td>1</td><td>6</td><td>3 unique abilities incl. ally firerate boost</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="info-box"><strong>Target Modes:</strong> Most towers support selectable targeting priority — First, Last, Strongest, Weakest — accessible from the tower info panel.</div>
+  </article>
+</main>
+<script src="wiki.js"></script>
+</body>
+</html>

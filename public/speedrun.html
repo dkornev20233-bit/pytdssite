@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pyTDS Speedrun</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="speedrun.css">
+</head>
+<body class="sr-page">
+
+<div class="noise"></div>
+<div class="grid-lines"></div>
+<div class="orb orb-1" style="background:radial-gradient(circle,#a78bfa,transparent 70%)"></div>
+<div class="orb orb-2" style="background:radial-gradient(circle,#f472b6,transparent 70%)"></div>
+
+<!-- ═══ RULES MODAL ═══ -->
+<div class="modal-overlay hidden" id="rulesModal">
+  <div class="modal-card">
+    <div class="modal-header">
+      <div class="modal-title">📋 Speedrun Rules</div>
+      <button class="modal-close" onclick="closeRules()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="rule-section">
+        <div class="rule-section-title">General Rules</div>
+        <ul class="rule-list">
+          <li>All runs must be recorded with video proof — no exceptions.</li>
+          <li>Video must clearly show the full run from start to finish, including the timer.</li>
+          <li>Runs without a visible in-game or external timer will be rejected.</li>
+          <li>Splicing, editing, or cutting the footage is strictly prohibited.</li>
+        </ul>
+      </div>
+      <div class="rule-section">
+        <div class="rule-section-title">Video Requirements</div>
+        <ul class="rule-list">
+          <li>Submit a <strong>YouTube</strong>, <strong>Twitch clip</strong>, or <strong>direct video link</strong>.</li>
+          <li>Video must be publicly accessible at the time of submission.</li>
+          <li>Minimum resolution: 720p. Audio is not required but preferred.</li>
+          <li>The game window must be clearly visible and unobstructed.</li>
+        </ul>
+      </div>
+      <div class="rule-section">
+        <div class="rule-section-title">Timing</div>
+        <ul class="rule-list">
+          <li><strong>Any%</strong> — Time starts on game launch, ends when the final wave is cleared.</li>
+          <li><strong>100%</strong> — All towers must be placed and all waves completed.</li>
+          <li><strong>Wave 30</strong> — Time ends on the first frame wave 30 is completed.</li>
+                  <li><strong>No Hit</strong> — Complete the game without losing a single HP. Any damage to your base disqualifies the run. Video must clearly show the HP counter at all times.</li>
+          <li><strong>No Upgrades</strong> — No tower upgrades allowed. Verified by video.</li>
+        </ul>
+      </div>
+      <div class="rule-section">
+        <div class="rule-section-title">Verification</div>
+        <ul class="rule-list">
+          <li>All submitted runs go through admin review before appearing on the leaderboard.</li>
+          <li>Suspicious runs may be flagged for extended review or rejected.</li>
+          <li>Moderators reserve the right to reject any run that violates the spirit of the rules.</li>
+          <li>Admins reserve the right to publish incomplete records.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AUTH OVERLAY ═══ -->
+<div class="auth-overlay" id="authOverlay">
+  <div class="auth-card" id="authCard">
+    <!-- LOGIN -->
+    <div class="auth-panel" id="panelLogin">
+      <a href="index.html" class="auth-back">← Back to pyTDS</a>
+      <div class="auth-logo"><span class="title-py">py</span>TDS <span class="sr-label">Speedrun</span></div>
+      <h2 class="auth-title">Sign in</h2>
+      <p class="auth-sub">Access the leaderboard and submit your runs</p>
+      <div class="auth-form">
+        <div class="field">
+          <label>Username</label>
+          <input type="text" id="loginUser" placeholder="your_username" autocomplete="off"/>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" id="loginPass" placeholder="••••••••"/>
+        </div>
+        <div class="auth-error" id="loginError"></div>
+        <button class="auth-btn" onclick="doLogin()">Sign In</button>
+      </div>
+      <p class="auth-switch">No account? <span class="auth-link" onclick="switchPanel('register')">Register</span></p>
+    </div>
+
+    <!-- REGISTER -->
+    <div class="auth-panel hidden" id="panelRegister">
+      <a href="index.html" class="auth-back">← Back to pyTDS</a>
+      <div class="auth-logo"><span class="title-py">py</span>TDS <span class="sr-label">Speedrun</span></div>
+      <h2 class="auth-title">Create account</h2>
+      <p class="auth-sub">Join the community and start submitting runs</p>
+      <div class="auth-form">
+        <div class="field">
+          <label>Username</label>
+          <input type="text" id="regUser" placeholder="choose_username" autocomplete="off"/>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" id="regPass" placeholder="min 6 characters"/>
+        </div>
+        <div class="field">
+          <label>Confirm Password</label>
+          <input type="password" id="regPass2" placeholder="repeat password"/>
+        </div>
+        <div class="auth-error" id="regError"></div>
+        <button class="auth-btn" onclick="doRegister()">Create Account</button>
+      </div>
+      <p class="auth-switch">Already have one? <span class="auth-link" onclick="switchPanel('login')">Sign in</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SPEEDRUN APP ═══ -->
+<div class="sr-app hidden" id="srApp">
+
+  <!-- Navbar -->
+  <nav class="sr-nav">
+    <a href="index.html" class="nav-logo"><span class="title-py">py</span>TDS</a>
+    <span class="nav-sep">/</span>
+    <span class="nav-title">Speedrun</span>
+    <div class="nav-right">
+      <button class="rules-btn" onclick="openRules()">📋 Rules</button>
+      <span class="nav-user" id="navUser"></span>
+      <button class="nav-logout" onclick="doLogout()">Log out</button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="sr-hero">
+    <div class="section-tag" style="color:var(--accent2)">// leaderboard</div>
+    <h1 class="sr-h1"><span class="title-py">py</span>TDS <span class="hl2">Speedrun</span></h1>
+    <p class="sr-sub">Submit your time and climb the leaderboard. All runs are verified by moderators.</p>
+  </div>
+
+  <!-- Submit run -->
+  <div class="sr-submit-wrap">
+    <div class="sr-submit">
+      <div class="sr-submit-header">
+        <div class="sr-submit-title">Submit your run</div>
+        <div class="sr-submit-note">⏳ Runs are reviewed before appearing on the board</div>
+      </div>
+      <div class="sr-submit-grid">
+        <div class="field field-inline">
+          <label>Category</label>
+          <select id="runCategory">
+            <option value="Any%">Any%</option>
+            <option value="100%">100%</option>
+            <option value="Wave 30">Wave 30</option>
+            <option value="No Hit">No Hit</option>
+            <option value="Hardcore">Hardcore</option>
+            <option value="Frost">Frost</option>
+            
+          </select>
+        </div>
+        <div class="field field-inline">
+          <label>Time (mm:ss)</label>
+          <input type="text" id="runTime" placeholder="e.g. 12:34" maxlength="5"/>
+        </div>
+        <div class="field field-wide">
+          <label>Video proof URL <span class="field-req">*required</span></label>
+          <input type="url" id="runVideo" placeholder="https://youtube.com/watch?v=... or twitch clip link"/>
+        </div>
+        <div class="field field-wide">
+          <label>Comment <span class="field-opt">(optional)</span></label>
+          <input type="text" id="runComment" placeholder="Notes about your run, setup, etc." maxlength="200"/>
+        </div>
+      </div>
+      <div class="sr-submit-footer">
+        <div class="auth-error" id="submitError"></div>
+        <button class="auth-btn submit-btn" onclick="submitRun()">Submit Run</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- My pending runs -->
+  <div class="sr-lb-wrap">
+    <div class="pending-section" id="pendingSection" style="display:none">
+      <div class="pending-title">⏳ Your pending runs</div>
+      <div id="pendingList"></div>
+    </div>
+  </div>
+
+  <!-- Leaderboard -->
+  <div class="sr-lb-wrap">
+    <div class="sr-categories" id="srCategories"></div>
+    <div class="sr-table-wrap">
+      <table class="sr-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Runner</th>
+            <th>Time</th>
+            <th>Category</th>
+            <th>Video</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="lbBody"></tbody>
+      </table>
+      <div class="lb-empty" id="lbEmpty">No verified runs yet. Be the first!</div>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="speedrun.js"></script>
+</body>
+</html>

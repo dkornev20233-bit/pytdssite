@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fallen Enemies — pyTDS Wiki</title><link rel="stylesheet" href="wiki.css"></head>
+<body><aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><span class="logo-py">py</span><span class="logo-tds">TDS</span><span class="logo-wiki">Wiki</span></div>
+  <nav class="sidebar-nav"><div class="nav-section"><a href="index.html" class="nav-link ">🏠 Home</a>
+<a href="modes.html" class="nav-link ">🎮 Game Modes</a>
+<a href="maps.html" class="nav-link ">🗺️ Maps</a>
+<a href="towers.html" class="nav-link ">🗼 All Towers</a>
+<a href="enemies-easy.html" class="nav-link ">🟢 Easy Enemies</a>
+<a href="enemies-fallen.html" class="nav-link active">🟣 Fallen Enemies</a>
+<a href="enemies-frosty.html" class="nav-link ">🔵 Frosty Enemies</a>
+<a href="achievements.html" class="nav-link ">🏆 Achievements</a>
+<a href="multiplayer.html" class="nav-link ">🌐 Multiplayer</a>
+</div></nav>
+  <a href="../index.html" class="sidebar-main-link" target="_blank">← Main Site</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="breadcrumb">pyTDS Wiki / <span>Enemies / Fallen</span></div>
+    <div class="topbar-right"><div class="search-wrap">
+      <input type="text" id="searchInput" class="search" placeholder="Search wiki..." oninput="doSearch(this.value)" onkeydown="if(event.key==='Escape')clearSearch()"/>
+      <div class="search-results hidden" id="searchResults"></div>
+    </div></div>
+  </div>
+  <article class="content">    <div class="page-header">
+      <h1 class="page-title">Fallen Mode Enemies</h1>
+      <p class="page-sub">40 waves — entirely different roster with much higher HP and rewards</p>
+    </div>
+    <div class="wiki-section"><h2>Regular Fallen Enemies</h2><div class="enemy-grid"><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:#fca5a5">Abnormal</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 11</span><span class="estat estat-spd">Spd 55+3/w</span><span class="estat estat-rew">+8💰</span></div>
+      <div class="enemy-card-notes">Fallen-mode Normal equivalent.</div>
+    </div><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:var(--cyan)">Quick</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 12</span><span class="estat estat-spd">Spd 140+5/w</span><span class="estat estat-rew">+8💰</span></div>
+      <div class="enemy-card-notes">Fallen-mode Fast equivalent.</div>
+    </div><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:#e5e7eb">Skeleton</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 55</span><span class="estat estat-spd">Spd 55+3/w</span><span class="estat estat-rew">+60💰</span></div>
+      <div class="enemy-card-notes">Worth 60 coins. Bone cross marks.</div>
+    </div><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:var(--accent2)">Fallen Dreg</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 80</span><span class="estat estat-spd">Spd 83+3/w</span><span class="estat estat-rew">+120💰</span><span class="estat estat-arm">20% armor</span></div>
+      <div class="enemy-card-notes">First true Fallen unit. Faster than Normal.</div>
+    </div><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:var(--accent2)">Fallen Soul</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 150</span><span class="estat estat-spd">Spd 55+3/w</span><span class="estat estat-rew">+180💰</span><span class="estat estat-arm">20% armor</span><span class="estat estat-hid">Hidden</span></div>
+      <div class="enemy-card-notes">Hidden + armored. Needs hidden detection towers.</div>
+    </div><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:var(--accent2)">Fallen</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 200</span><span class="estat estat-spd">Spd 140+5/w</span><span class="estat estat-rew">+360💰</span></div>
+      <div class="enemy-card-notes">Fast fallen unit.</div>
+    </div><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:#6ee7b7">Fallen Hazmat</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 200</span><span class="estat estat-spd">Spd 55+3/w</span><span class="estat estat-rew">+480💰</span><span class="estat estat-arm">30% armor</span></div>
+      <div class="enemy-card-notes">30% armor. Hazmat symbol design.</div>
+    </div><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:var(--accent2)">Fallen Squire</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 400</span><span class="estat estat-spd">Spd 42+2/w</span><span class="estat estat-rew">+656💰</span></div>
+      <div class="enemy-card-notes">Mini-boss tier regular.</div>
+    </div><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:var(--accent2)">Fallen Breaker</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 30</span><span class="estat estat-spd">Spd 55</span><span class="estat estat-rew">+50💰</span><span class="estat estat-arm">30% armor</span></div>
+      <div class="enemy-card-notes">Fallen-mode Breaker with 30% armor.</div>
+    </div><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:var(--accent2)">Fallen Rusher</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 350</span><span class="estat estat-spd">Spd 140+5/w</span><span class="estat estat-rew">+1500💰</span><span class="estat estat-arm">40% armor</span></div>
+      <div class="enemy-card-notes">40% armor + very fast. Extremely dangerous.</div>
+    </div><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:#f472b6">Corrupted Fallen</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 1,000</span><span class="estat estat-spd">Spd 120+4/w</span><span class="estat estat-rew">+1,200💰</span></div>
+      <div class="enemy-card-notes">Fast and very tanky.</div>
+    </div>    </div></div>
+    <div class="wiki-section"><h2>Elite Fallen Enemies</h2><div class="enemy-grid"><div class="enemy-card" style="border: 2px solid rgba(255,200,50,0.35);">
+      <div class="enemy-card-name" style="color:var(--accent2)">Fallen Giant  👑</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 3,000</span><span class="estat estat-spd">Spd 28+1/w</span><span class="estat estat-rew">+5,000💰</span></div>
+      <div class="enemy-card-notes">Massive HP. $5000 reward makes it high priority.</div>
+    </div><div class="enemy-card" style="border: 2px solid rgba(255,200,50,0.35);">
+      <div class="enemy-card-name" style="color:#94a3b8">Possessed Armor  👑</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 300</span><span class="estat estat-spd">Spd 55+3/w</span><span class="estat estat-rew">+1,650💰</span><span class="estat estat-arm">50% armor</span></div>
+      <div class="enemy-card-notes">50% armor. Spawns a ghost (Possessed Armor Inner) on death.</div>
+    </div><div class="enemy-card" style="border: 2px solid rgba(255,200,50,0.35);">
+      <div class="enemy-card-name" style="color:#f472b6">Fallen Necromancer  👑</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 3,000</span><span class="estat estat-spd">Spd 28+1/w</span><span class="estat estat-rew">+3,000💰</span></div>
+      <div class="enemy-card-notes">Summons fallen enemies every 5s.</div>
+    </div><div class="enemy-card" style="border: 2px solid rgba(255,200,50,0.35);">
+      <div class="enemy-card-name" style="color:#e5e7eb">Necrotic Skeleton  👑</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 1,400</span><span class="estat estat-spd">Spd 120+4/w</span><span class="estat estat-rew">+1,400💰</span></div>
+      <div class="enemy-card-notes">Fast + tanky skeleton. High reward.</div>
+    </div><div class="enemy-card" style="border: 2px solid rgba(255,200,50,0.35);">
+      <div class="enemy-card-name" style="color:#f472b6">Fallen Jester  👑</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 10,000</span><span class="estat estat-spd">Spd 28</span><span class="estat estat-rew">+100💰</span></div>
+      <div class="enemy-card-notes">Only $100 reward despite 10,000 HP — a deliberate coin sink.</div>
+    </div><div class="enemy-card" style="border: 2px solid rgba(255,200,50,0.35);">
+      <div class="enemy-card-name" style="color:var(--accent2)">Fallen Shield  👑</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 8,000</span><span class="estat estat-spd">Spd 55+2/w</span><span class="estat estat-arm">40% armor</span></div>
+      <div class="enemy-card-notes">40% armor. Shield cross design.</div>
+    </div><div class="enemy-card" style="border: 2px solid rgba(255,200,50,0.35);">
+      <div class="enemy-card-name" style="color:var(--accent2)">Fallen Hero  👑</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 2,500</span><span class="estat estat-spd">Spd 55+2/w</span><span class="estat estat-arm">25% armor</span></div>
+      <div class="enemy-card-notes">Summoned by Fallen King. 25% armor.</div>
+    </div><div class="enemy-card" style="border: 2px solid rgba(255,200,50,0.35);">
+      <div class="enemy-card-name" style="color:var(--accent2)">Fallen Honor Guard  👑</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 75,000</span><span class="estat estat-spd">Spd 22</span></div>
+      <div class="enemy-card-notes">Pre-boss wall at wave 35. Massive HP, 8 orbiting particles.</div>
+    </div><div class="enemy-card" style="border: 2px solid rgba(255,200,50,0.35);">
+      <div class="enemy-card-name" style="color:#c084fc">Fallen King  👑</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 175,000</span><span class="estat estat-spd">Spd 9</span><span class="estat estat-arm">5% armor</span></div>
+      <div class="enemy-card-notes">Final boss wave 40. Charges (speed 55, hidden), sword-lunges at towers, summons Fallen Heroes. 50% slow resist.</div>
+    </div><div class="enemy-card" style="border: 2px solid rgba(255,200,50,0.35);">
+      <div class="enemy-card-name" style="color:var(--red)">True Fallen King  👑</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 175,000</span><span class="estat estat-spd">Spd 8</span><span class="estat estat-arm">10% armor</span></div>
+      <div class="enemy-card-notes">Enhanced form. Phase Shift (immune 2s at <50% HP), Curse Wave, Blood Charge fire trail, Dark Summon. 80% slow resist.</div>
+    </div>    </div></div>
+    <div class="wiki-section"><h2>Fallen King Abilities Detail</h2>
+    <div class="quick-table-wrap"><table class="wiki-table">
+      <thead><tr><th>Ability</th><th>Effect</th><th>Cooldown</th></tr></thead><tbody>
+      <tr><td><strong>Charge</strong></td><td>Speed → 55, turns hidden for ~1s</td><td>7–15s random</td></tr>
+      <tr><td><strong>Sword Lunge</strong></td><td>Dashes to a tower position, pauses, returns to path</td><td>9–15s random</td></tr>
+      <tr><td><strong>Hero Summon</strong></td><td>Spawns Fallen Hero enemies</td><td>7–15s random</td></tr>
+      <tr><td><strong>Phase Shift</strong> (TFK)</td><td>Full damage immunity for 2s at &lt;50% HP</td><td>25s</td></tr>
+      <tr><td><strong>Curse Wave</strong> (TFK)</td><td>Expanding AoE ring stuns towers in 300px</td><td>12–20s</td></tr>
+      <tr><td><strong>Blood Charge</strong> (TFK)</td><td>Speed → 90, hidden, fire trail left behind</td><td>8–14s</td></tr>
+      <tr><td><strong>Dark Summon</strong> (TFK)</td><td>Spawns Fallen Shield + Fallen Hero pairs</td><td>10–18s</td></tr>
+      </tbody></table></div></div></article>
+</main><script src="wiki.js"></script></body></html>

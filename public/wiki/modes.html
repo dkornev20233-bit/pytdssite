@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Modes — pyTDS Wiki</title>
+<link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><span class="logo-py">py</span><span class="logo-tds">TDS</span><span class="logo-wiki">Wiki</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <div class="nav-section-title">Getting Started</div>
+      <a href="index.html" class="nav-link ">🏠 Home</a>
+      <a href="modes.html" class="nav-link active">🎮 Game Modes</a>
+      <a href="maps.html" class="nav-link ">🗺️ Maps</a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-title">Towers</div>
+      <a href="towers.html" class="nav-link ">🗼 All Towers</a>
+      <a href="tower-assassin.html" class="nav-link nav-sub ">Assassin</a>
+      <a href="tower-accelerator.html" class="nav-link nav-sub ">Accelerator</a>
+      <a href="tower-archer.html" class="nav-link nav-sub ">Archer</a>
+      <a href="tower-lifestealer.html" class="nav-link nav-sub ">Lifestealer</a>
+      <a href="tower-frostcelerator.html" class="nav-link nav-sub ">Frostcelerator</a>
+      <a href="tower-redball.html" class="nav-link nav-sub ">Red Ball</a>
+      <a href="tower-freezer.html" class="nav-link nav-sub ">Freezer</a>
+      <a href="tower-frostblaster.html" class="nav-link nav-sub ">Frost Blaster</a>
+      <a href="tower-sledger.html" class="nav-link nav-sub ">Sledger</a>
+      <a href="tower-gladiator.html" class="nav-link nav-sub ">Gladiator</a>
+      <a href="tower-toxicgunner.html" class="nav-link nav-sub ">Toxic Gunner</a>
+      <a href="tower-slasher.html" class="nav-link nav-sub ">Slasher</a>
+      <a href="tower-farm.html" class="nav-link nav-sub ">Farm</a>
+      <a href="tower-xw5yt.html" class="nav-link nav-sub nav-exclusive ">xw5yt ✦</a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-title">Enemies</div>
+      <a href="enemies-easy.html" class="nav-link ">🟢 Easy Enemies</a>
+      <a href="enemies-fallen.html" class="nav-link ">🟣 Fallen Enemies</a>
+      <a href="enemies-frosty.html" class="nav-link ">🔵 Frosty Enemies</a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-title">Other</div>
+      <a href="achievements.html" class="nav-link ">🏆 Achievements</a>
+      <a href="multiplayer.html" class="nav-link ">🌐 Multiplayer</a>
+          </div>
+  </nav>
+  <a href="../index.html" class="sidebar-main-link" target="_blank">← Main Site</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="breadcrumb">pyTDS Wiki / <span>Game Modes</span></div>
+    <div class="topbar-right">
+      <div class="search-wrap">
+        <input type="text" id="searchInput" class="search" placeholder="Search wiki..." oninput="doSearch(this.value)" onkeydown="if(event.key==='Escape')clearSearch()"/>
+        <div class="search-results hidden" id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+  <article class="content">
+    <div class="page-header">
+      <h1 class="page-title">Game Modes</h1>
+      <p class="page-sub">Four modes — each with unique enemies, wave counts, and final bosses</p>
+    </div>
+    <div class="mode-grid wiki-section">
+      <div class="mode-card mode-easy">
+        <div class="mode-card-title" style="color:var(--green)">🟢 Easy</div>
+        <div class="mode-card-row"><span class="mode-card-label">Waves</span><span class="mode-card-val">20</span></div>
+        <div class="mode-card-row"><span class="mode-card-label">Maps</span><span class="mode-card-val">Straight, Zigzag</span></div>
+        <div class="mode-card-row"><span class="mode-card-label">Final boss</span><span class="mode-card-val">Grave Digger</span></div>
+        <div class="mode-card-row"><span class="mode-card-label">Boss HP</span><span class="mode-card-val">5,000</span></div>
+        <div class="mode-card-row"><span class="mode-card-label">Enemy roster</span><span class="mode-card-val">Normal, Fast, Slow, Hidden, Armored, Breaker, Necromancer, Bosses</span></div>
+      </div>
+      <div class="mode-card mode-fallen">
+        <div class="mode-card-title" style="color:var(--accent2)">🟣 Fallen</div>
+        <div class="mode-card-row"><span class="mode-card-label">Waves</span><span class="mode-card-val">40</span></div>
+        <div class="mode-card-row"><span class="mode-card-label">Maps</span><span class="mode-card-val">Straight, Zigzag</span></div>
+        <div class="mode-card-row"><span class="mode-card-label">Final boss</span><span class="mode-card-val">Fallen King / True Fallen King</span></div>
+        <div class="mode-card-row"><span class="mode-card-label">Boss HP</span><span class="mode-card-val">175,000</span></div>
+        <div class="mode-card-row"><span class="mode-card-label">Enemy roster</span><span class="mode-card-val">All Easy + full Fallen tier roster</span></div>
+      </div>
+      <div class="mode-card mode-frosty">
+        <div class="mode-card-title" style="color:var(--cyan)">🔵 Frosty</div>
+        <div class="mode-card-row"><span class="mode-card-label">Waves</span><span class="mode-card-val">40</span></div>
+        <div class="mode-card-row"><span class="mode-card-label">Map</span><span class="mode-card-val">Frosty (4-lane)</span></div>
+        <div class="mode-card-row"><span class="mode-card-label">Final boss</span><span class="mode-card-val">Frost Spirit</span></div>
+        <div class="mode-card-row"><span class="mode-card-label">Boss HP</span><span class="mode-card-val">500,000</span></div>
+        <div class="mode-card-row"><span class="mode-card-label">Enemy roster</span><span class="mode-card-val">Exclusive ice-themed enemy roster</span></div>
+      </div>
+      <div class="mode-card mode-sandbox">
+        <div class="mode-card-title" style="color:var(--gold)">🟡 Sandbox</div>
+        <div class="mode-card-row"><span class="mode-card-label">Waves</span><span class="mode-card-val">Unlimited</span></div>
+        <div class="mode-card-row"><span class="mode-card-label">Maps</span><span class="mode-card-val">All</span></div>
+        <div class="mode-card-row"><span class="mode-card-label">Final boss</span><span class="mode-card-val">—</span></div>
+        <div class="mode-card-row"><span class="mode-card-label">Features</span><span class="mode-card-val">All towers available, admin panel, free play</span></div>
+      </div>
+    </div>
+    <div class="wiki-section">
+      <h2>Fallen King — Boss Mechanics</h2>
+      <p>The Fallen King appears at wave 40 of Fallen mode. It has several active abilities:</p>
+      <ul>
+        <li><strong>Charge</strong> — randomly speeds up to 55 px/s and turns hidden for ~1 second every 7–15s.</li>
+        <li><strong>Sword Lunge</strong> — leaps toward a tower, pauses, then returns to path. Cooldown 9–15s.</li>
+        <li><strong>Hero Summon</strong> — summons Fallen Hero enemies periodically (every 7–15s).</li>
+        <li><strong>5% armor</strong> — slight damage reduction. Slow resistance 50%.</li>
+      </ul>
+      <h2>True Fallen King — Additional Abilities</h2>
+      <div class="danger-box"><strong>Warning:</strong> True Fallen King is significantly harder than the regular Fallen King and activates under special conditions.</div>
+      <ul>
+        <li><strong>Phase Shift</strong> — becomes fully immune to damage for 2 seconds at &lt;50% HP. Cooldown 25s.</li>
+        <li><strong>Curse Wave</strong> — AoE expanding ring that stuns towers. Cooldown 12–20s.</li>
+        <li><strong>Blood Charge</strong> — fast dash (90 px/s), turns hidden, leaves fire trail. Cooldown 8–14s.</li>
+        <li><strong>Dark Summon</strong> — summons Fallen Shield + Fallen Hero pairs. Cooldown 10–18s.</li>
+        <li><strong>10% armor, 80% slow resistance</strong></li>
+      </ul>
+    </div>
+  </article>
+</main>
+<script src="wiki.js"></script>
+</body>
+</html>

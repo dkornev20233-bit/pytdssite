@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slasher — pyTDS Wiki</title><link rel="stylesheet" href="wiki.css"></head>
+<body><aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><span class="logo-py">py</span><span class="logo-tds">TDS</span><span class="logo-wiki">Wiki</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section"><a href="index.html" class="nav-link ">🏠 Home</a>
+<a href="modes.html" class="nav-link ">🎮 Game Modes</a>
+<a href="maps.html" class="nav-link ">🗺️ Maps</a>
+<a href="towers.html" class="nav-link ">🗼 All Towers</a>
+<a href="enemies-easy.html" class="nav-link ">🟢 Easy Enemies</a>
+<a href="enemies-fallen.html" class="nav-link ">🟣 Fallen Enemies</a>
+<a href="enemies-frosty.html" class="nav-link ">🔵 Frosty Enemies</a>
+<a href="achievements.html" class="nav-link ">🏆 Achievements</a>
+<a href="multiplayer.html" class="nav-link ">🌐 Multiplayer</a>
+</div>
+    <div class="nav-section">
+      <div class="nav-section-title">Towers</div>
+      <a href="tower-assassin.html" class="nav-link nav-sub ">Assassin</a>
+<a href="tower-accelerator.html" class="nav-link nav-sub ">Accelerator</a>
+<a href="tower-archer.html" class="nav-link nav-sub ">Archer</a>
+<a href="tower-lifestealer.html" class="nav-link nav-sub ">Lifestealer</a>
+<a href="tower-frostcelerator.html" class="nav-link nav-sub ">Frostcelerator</a>
+<a href="tower-redball.html" class="nav-link nav-sub ">Red Ball</a>
+<a href="tower-freezer.html" class="nav-link nav-sub ">Freezer</a>
+<a href="tower-frostblaster.html" class="nav-link nav-sub ">Frost Blaster</a>
+<a href="tower-sledger.html" class="nav-link nav-sub ">Sledger</a>
+<a href="tower-gladiator.html" class="nav-link nav-sub ">Gladiator</a>
+<a href="tower-toxicgunner.html" class="nav-link nav-sub ">Toxic Gunner</a>
+<a href="tower-slasher.html" class="nav-link nav-sub active">Slasher</a>
+<a href="tower-farm.html" class="nav-link nav-sub ">Farm</a>
+<a href="tower-xw5yt.html" class="nav-link nav-sub nav-exclusive ">xw5yt ✦</a>
+
+    </div>
+  </nav>
+  <a href="../index.html" class="sidebar-main-link" target="_blank">← Main Site</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="breadcrumb">pyTDS Wiki / Towers / <span>Slasher</span></div>
+    <div class="topbar-right"><div class="search-wrap">
+      <input type="text" id="searchInput" class="search" placeholder="Search wiki..." oninput="doSearch(this.value)" onkeydown="if(event.key==='Escape')clearSearch()"/>
+      <div class="search-results hidden" id="searchResults"></div>
+    </div></div>
+  </div>
+  <article class="content">
+    <div class="page-header">
+      <h1 class="page-title">Slasher </h1>
+    </div>
+    <div class="tower-hero">
+      <div class="tower-hero-icon" style="background:rgba(160,30,30,0.25);font-size:32px">🩹</div>
+      <div class="tower-hero-info">
+        <div class="tower-hero-name">Slasher</div>
+        <div class="tower-hero-meta">
+          <div class="tower-hero-stat">Cost <strong>1700 💰</strong></div>
+          <div class="tower-hero-stat">Max on field <strong>3</strong></div>
+          <div class="tower-hero-stat">Upgrade levels <strong>5</strong></div>
+        </div>
+      </div>
+    </div><div class="wiki-section"><h2>Upgrade table</h2>
+    <div class="upgrade-table-wrap"><table class="upgrade-table">
+      <thead><tr><th>Level</th><th>Cost</th><th>DMG</th><th>Swing Rate (s)</th><th>Range (tiles)</th><th>Crit every N hits</th><th>Crit Mult</th><th>Hidden Det.</th><th>Bleed/hit</th><th>Max Bleed Stacks</th></tr></thead>
+      <tbody><tr><td><span class='lv-badge lv-place'>Place</span></td><td class="cost-cell">1700</td><td>6</td><td>0.508</td><td>6.0</td><td>3rd</td><td>×1.75</td><td>No</td><td>0</td><td>30</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 1</span></td><td class="cost-cell">1250</td><td>6</td><td>0.408</td><td>6.0</td><td>3rd</td><td>×2.50</td><td>✅ Yes</td><td>0</td><td>30</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 2</span></td><td class="cost-cell">3500</td><td>20</td><td>0.708</td><td>6.5</td><td>3rd</td><td>×3.00</td><td>✅ Yes</td><td>1</td><td>30</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 3</span></td><td class="cost-cell">6500</td><td>45</td><td>0.608</td><td>7.0</td><td>3rd</td><td>×3.50</td><td>✅ Yes</td><td>2</td><td>30</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 4</span></td><td class="cost-cell">20000</td><td>60</td><td>0.508</td><td>7.5</td><td>3rd</td><td>×4.00</td><td>✅ Yes</td><td>3</td><td>30</td></tr></tbody>
+    </table></div></div><div class="wiki-section"><h2>Mechanics</h2><p>Melee tower with a <strong>crit rhythm</strong> — every 3rd attack is a critical hit.</p><ul><li>Every <strong>3rd swing</strong> deals damage × crit multiplier (1.75× to 4.0×).</li><li>Produces a red <strong>BloodSlash effect</strong> — larger and more dramatic on crits.</li><li>Hidden Detection at <strong>Lv1</strong>.</li><li><strong>Bleed stacks (Lv2+):</strong> each swing adds N bleed stacks to the target. Each stack deals <strong>0.5% of enemy max HP</strong> per tick.</li><li>Max <strong>30 bleed stacks</strong> per enemy. Stacks accumulate across multiple swings.</li><li>Single target — does NOT pierce or AoE.</li></ul><div class="warn-box">Bleed is extremely powerful against high-max-HP enemies — 30 stacks × 0.5% = 15% of max HP as bonus damage per tick cycle.</div></div><div class="wiki-section"><h2>Tips</h2><ul><li>Strongest against tanks and bosses (Fallen Giant, Fallen King) due to bleed scaling with max HP.</li><li>Hidden Detection at Lv1 makes it useful against Hidden Bosses early.</li><li>Lv4 crit (×4.0) + 3 bleed stacks per hit = extremely high burst on the 3rd swing.</li><li>Max 3 on field — stack all 3 for maximum bleed application speed.</li></ul></div></article>
+</main><script src="wiki.js"></script></body></html>

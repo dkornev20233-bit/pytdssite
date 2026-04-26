@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freezer — pyTDS Wiki</title><link rel="stylesheet" href="wiki.css"></head>
+<body><aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><span class="logo-py">py</span><span class="logo-tds">TDS</span><span class="logo-wiki">Wiki</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section"><a href="index.html" class="nav-link ">🏠 Home</a>
+<a href="modes.html" class="nav-link ">🎮 Game Modes</a>
+<a href="maps.html" class="nav-link ">🗺️ Maps</a>
+<a href="towers.html" class="nav-link ">🗼 All Towers</a>
+<a href="enemies-easy.html" class="nav-link ">🟢 Easy Enemies</a>
+<a href="enemies-fallen.html" class="nav-link ">🟣 Fallen Enemies</a>
+<a href="enemies-frosty.html" class="nav-link ">🔵 Frosty Enemies</a>
+<a href="achievements.html" class="nav-link ">🏆 Achievements</a>
+<a href="multiplayer.html" class="nav-link ">🌐 Multiplayer</a>
+</div>
+    <div class="nav-section">
+      <div class="nav-section-title">Towers</div>
+      <a href="tower-assassin.html" class="nav-link nav-sub ">Assassin</a>
+<a href="tower-accelerator.html" class="nav-link nav-sub ">Accelerator</a>
+<a href="tower-archer.html" class="nav-link nav-sub ">Archer</a>
+<a href="tower-lifestealer.html" class="nav-link nav-sub ">Lifestealer</a>
+<a href="tower-frostcelerator.html" class="nav-link nav-sub ">Frostcelerator</a>
+<a href="tower-redball.html" class="nav-link nav-sub ">Red Ball</a>
+<a href="tower-freezer.html" class="nav-link nav-sub active">Freezer</a>
+<a href="tower-frostblaster.html" class="nav-link nav-sub ">Frost Blaster</a>
+<a href="tower-sledger.html" class="nav-link nav-sub ">Sledger</a>
+<a href="tower-gladiator.html" class="nav-link nav-sub ">Gladiator</a>
+<a href="tower-toxicgunner.html" class="nav-link nav-sub ">Toxic Gunner</a>
+<a href="tower-slasher.html" class="nav-link nav-sub ">Slasher</a>
+<a href="tower-farm.html" class="nav-link nav-sub ">Farm</a>
+<a href="tower-xw5yt.html" class="nav-link nav-sub nav-exclusive ">xw5yt ✦</a>
+
+    </div>
+  </nav>
+  <a href="../index.html" class="sidebar-main-link" target="_blank">← Main Site</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="breadcrumb">pyTDS Wiki / Towers / <span>Freezer</span></div>
+    <div class="topbar-right"><div class="search-wrap">
+      <input type="text" id="searchInput" class="search" placeholder="Search wiki..." oninput="doSearch(this.value)" onkeydown="if(event.key==='Escape')clearSearch()"/>
+      <div class="search-results hidden" id="searchResults"></div>
+    </div></div>
+  </div>
+  <article class="content">
+    <div class="page-header">
+      <h1 class="page-title">Freezer </h1>
+    </div>
+    <div class="tower-hero">
+      <div class="tower-hero-icon" style="background:rgba(80,200,255,0.25);font-size:32px">🧊</div>
+      <div class="tower-hero-info">
+        <div class="tower-hero-name">Freezer</div>
+        <div class="tower-hero-meta">
+          <div class="tower-hero-stat">Cost <strong>400 💰</strong></div>
+          <div class="tower-hero-stat">Max on field <strong>6</strong></div>
+          <div class="tower-hero-stat">Upgrade levels <strong>5</strong></div>
+        </div>
+      </div>
+    </div><div class="wiki-section"><h2>Upgrade table</h2>
+    <div class="upgrade-table-wrap"><table class="upgrade-table">
+      <thead><tr><th>Level</th><th>Cost</th><th>DMG</th><th>Firerate (s)</th><th>Range (tiles)</th><th>Slow %</th><th>Slow Duration</th></tr></thead>
+      <tbody><tr><td><span class='lv-badge lv-place'>Place</span></td><td class="cost-cell">400</td><td>3</td><td>0.9</td><td>4.0</td><td>5%</td><td>3s</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 1</span></td><td class="cost-cell">300</td><td>5</td><td>0.7</td><td>4.5</td><td>10%</td><td>3s</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 2</span></td><td class="cost-cell">500</td><td>8</td><td>0.7</td><td>5.0</td><td>10%</td><td>3s</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 3</span></td><td class="cost-cell">700</td><td>10</td><td>0.5</td><td>5.5</td><td>12%</td><td>4s</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 4</span></td><td class="cost-cell">1200</td><td>15</td><td>0.3</td><td>6.0</td><td>15%</td><td>5s</td></tr></tbody>
+    </table></div></div><div class="wiki-section"><h2>Mechanics</h2><p>Fires <strong>homing ice bullets</strong> that slow enemies on hit.</p><ul><li>If a stronger slow hits an already-slowed enemy → the <strong>stronger slow overrides</strong>.</li><li>The slow timer is always <strong>refreshed</strong> on a new hit from the same Freezer.</li><li>Multiple Freezers stack their slows — the highest active slow wins.</li><li>Does <strong>not</strong> freeze enemies — only slows. Use Frostcelerator or Sledger for full freeze.</li><li>No hidden detection at any level.</li></ul></div><div class="wiki-section"><h2>Tips</h2><ul><li>Cheap (400) and stackable (max 6) — good value for economy builds.</li><li>Best used against fast enemies to prevent them from escaping the range of other towers.</li><li>Combine with Assassin or Gladiator to keep enemies in AoE range longer.</li><li>At Lv4 the 15% slow with 5s duration is very reliable.</li></ul></div></article>
+</main><script src="wiki.js"></script></body></html>

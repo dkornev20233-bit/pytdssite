@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiplayer — pyTDS Wiki</title><link rel="stylesheet" href="wiki.css"></head>
+<body><aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><span class="logo-py">py</span><span class="logo-tds">TDS</span><span class="logo-wiki">Wiki</span></div>
+  <nav class="sidebar-nav"><div class="nav-section"><a href="index.html" class="nav-link ">🏠 Home</a>
+<a href="modes.html" class="nav-link ">🎮 Game Modes</a>
+<a href="maps.html" class="nav-link ">🗺️ Maps</a>
+<a href="towers.html" class="nav-link ">🗼 All Towers</a>
+<a href="enemies-easy.html" class="nav-link ">🟢 Easy Enemies</a>
+<a href="enemies-fallen.html" class="nav-link ">🟣 Fallen Enemies</a>
+<a href="enemies-frosty.html" class="nav-link ">🔵 Frosty Enemies</a>
+<a href="achievements.html" class="nav-link ">🏆 Achievements</a>
+<a href="multiplayer.html" class="nav-link active">🌐 Multiplayer</a>
+</div></nav>
+  <a href="../index.html" class="sidebar-main-link" target="_blank">← Main Site</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="breadcrumb">pyTDS Wiki / <span>Multiplayer</span></div>
+    <div class="topbar-right"><div class="search-wrap">
+      <input type="text" id="searchInput" class="search" placeholder="Search wiki..." oninput="doSearch(this.value)" onkeydown="if(event.key==='Escape')clearSearch()"/>
+      <div class="search-results hidden" id="searchResults"></div>
+    </div></div>
+  </div>
+  <article class="content">    <div class="page-header">
+      <h1 class="page-title">Multiplayer</h1>
+      <p class="page-sub">Co-op Fallen mode for 2 players over LAN or internet via ngrok</p>
+    </div>
+    <div class="warn-box"><strong>Multiplayer rules:</strong> Fallen mode only. All enemies have <strong>+50% HP</strong>. Both players place their own towers and share the same wave progression.</div>
+
+    <div class="wiki-section">
+      <h2>How to host</h2>
+      <ol>
+        <li>Launch the game → select <strong>Multiplayer</strong> → <strong>Host</strong></li>
+        <li>The game displays your <strong>local IP address</strong> and port <code>7777</code></li>
+        <li>Share these with your friend</li>
+        <li>Wait for client to connect — screen shows a spinner</li>
+        <li>Once connected, choose the map and start the game</li>
+      </ol>
+      <div class="info-box"><strong>Same network (LAN):</strong> Use the displayed local IP directly. No extra tools needed.</div>
+    </div>
+
+    <div class="wiki-section">
+      <h2>Cross-country / internet play (ngrok)</h2>
+      <ol>
+        <li>Download ngrok from <strong>ngrok.com</strong> and create a free account</li>
+        <li>Run: <code>ngrok tcp 7777</code></li>
+        <li>ngrok gives you a forwarding address like <code>0.tcp.ngrok.io:XXXXX</code></li>
+        <li>Share this address with your friend — they use it as the IP and port in the Join screen</li>
+      </ol>
+      <div class="warn-box"><strong>Note:</strong> Different countries (e.g. UA ↔ RU) will have NAT issues — ngrok or a VPN is required. Free ngrok accounts work fine.</div>
+    </div>
+
+    <div class="wiki-section">
+      <h2>How to join</h2>
+      <ol>
+        <li>Launch the game → <strong>Multiplayer</strong> → <strong>Join</strong></li>
+        <li>Enter the host's IP address and port (default 7777)</li>
+        <li>Click Connect — wait for the host to start the game</li>
+      </ol>
+    </div>
+
+    <div class="wiki-section">
+      <h2>Technical details</h2>
+      <div class="quick-table-wrap"><table class="wiki-table">
+        <thead><tr><th>Detail</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Protocol</td><td>TCP with length-prefixed messages</td></tr>
+          <tr><td>Compression</td><td>zlib level-1 (fast) on all packets</td></tr>
+          <tr><td>Tick rate</td><td>10 network ticks/second</td></tr>
+          <tr><td>Default port</td><td>7777</td></tr>
+          <tr><td>Enemy simulation</td><td>Host authoritative — client renders host state</td></tr>
+          <tr><td>Damage model</td><td>Client sends damage events → host applies them</td></tr>
+          <tr><td>Enemy HP multiplier</td><td>+50% on all enemies</td></tr>
+          <tr><td>Peer units</td><td>Shown with blue ring overlay labeled P1/P2</td></tr>
+          <tr><td>Keepalive</td><td>Ping every 3 seconds to prevent NAT timeout</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="wiki-section">
+      <h2>Status overlay</h2>
+      <p>During a multiplayer game a small status badge appears in the bottom-right corner showing:</p>
+      <ul>
+        <li>Connection status (● online / ● offline)</li>
+        <li>Your role (HOST / CLIENT)</li>
+        <li>Total messages received</li>
+        <li>Current enemy count</li>
+        <li>Peer unit count</li>
+      </ul>
+    </div></article>
+</main><script src="wiki.js"></script></body></html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pyTDS</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise"></div>
+<div class="grid-lines"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="header-group">
+      <div class="badge">v1.0 · stable · 1920×1080</div>
+      <h1 class="title"><span class="title-py">py</span><span class="title-tds">TDS</span></h1>
+      <p class="subtitle">A Tower Defense game built entirely in Python & Pygame</p>
+    </div>
+    <div class="hero-buttons">
+      <button class="button" onclick="downloadBuild()" id="dlBtn">
+        <span class="btn-bg"></span>
+        <span class="btn-content">
+          <span class="btn-text">Download</span>
+          <span class="btn-icon">
+            <svg class="svg" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"/>
+              <path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"/>
+              <path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"/>
+            </svg>
+          </span>
+        </span>
+        <span class="btn-progress"></span>
+        <span class="btn-ripple"></span>
+      </button>
+      <a href="speedrun.html" class="button button-sr">
+        <span class="btn-bg btn-bg-sr"></span>
+        <span class="btn-content">
+          <span class="btn-text">TDS py Speedrun</span>
+          <span class="btn-icon">
+            <svg class="svg svg-sr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <polygon points="5 3 19 12 5 21 5 3" fill="currentColor" stroke="none"/>
+            </svg>
+          </span>
+        </span>
+      </a>
+      <a href="wiki/index.html" class="button button-wiki">
+        <span class="btn-bg btn-bg-wiki"></span>
+        <span class="btn-content">
+          <span class="btn-text">Wiki</span>
+          <span class="btn-icon">
+            <svg class="svg svg-wiki" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+          </span>
+        </span>
+      </a>
+    </div>
+    <p class="meta">Python · Pygame · Open Source · GitHub</p>
+  </div>
+  <div class="scroll-hint">
+    <span>scroll</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="section section-alt" id="screenshots">
+  <div class="container section-inner">
+    <div class="section-tag reveal">// screenshots</div>
+    <h2 class="section-title reveal">See it in action</h2>
+    <p class="section-text reveal">Real gameplay footage — waves, towers, bosses.</p>
+    <div class="screenshots-viewer reveal">
+      <div class="ss-main">
+        <img src="assets/screenshot1.png" alt="Screenshot 1" id="ssMain"/>
+        <button class="ss-arrow ss-prev" onclick="ssNav(-1)">&#8249;</button>
+        <button class="ss-arrow ss-next" onclick="ssNav(1)">&#8250;</button>
+        <div class="ss-counter"><span id="ssCurrent">1</span> / 5</div>
+      </div>
+      <div class="ss-thumbs">
+        <img src="assets/screenshot1.png" alt="1" class="ss-thumb active" onclick="ssGo(0)"/>
+        <img src="assets/screenshot2.png" alt="2" class="ss-thumb" onclick="ssGo(1)"/>
+        <img src="assets/screenshot3.png" alt="3" class="ss-thumb" onclick="ssGo(2)"/>
+        <img src="assets/screenshot4.png" alt="4" class="ss-thumb" onclick="ssGo(3)"/>
+        <img src="assets/screenshot5.png" alt="5" class="ss-thumb" onclick="ssGo(4)"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container section-inner">
+    <div class="section-tag reveal">// about</div>
+    <h2 class="section-title reveal">What is pyTDS?</h2>
+    <p class="section-text reveal">
+      <strong>pyTDS</strong> is a <span class="hl">Tower Defense</span> game built entirely in Python using Pygame.
+      Place defensive towers on a 1920×1080 map, hold the line against escalating waves of enemies,
+      earn coins from kills, and upgrade your defenses. Survive all waves — or challenge yourself with
+      <span class="hl">Fallen</span> and <span class="hl">Frosty</span> modes that push to 40 waves with brutal new enemy types.
+    </p>
+    <div class="cards reveal">
+      <div class="card">
+        <div class="card-icon">🐍</div>
+        <div class="card-title">Pure Python</div>
+        <div class="card-desc">No engine — built from scratch with Python and Pygame. Fully open-source, lightweight, runs at 60 FPS.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏰</div>
+        <div class="card-title">4 Game Modes</div>
+        <div class="card-desc">Easy (20 waves), Fallen (40 waves), Frosty (40 ice waves), and Sandbox. Each has a unique enemy roster and final boss.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">Multiplayer Co-op</div>
+        <div class="card-desc">Play Fallen mode co-op over LAN or via ngrok. Both players build towers together against enemies with +50% HP.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GAMEPLAY -->
+<section class="section section-alt" id="gameplay">
+  <div class="container section-inner">
+    <div class="section-tag reveal">// gameplay</div>
+    <h2 class="section-title reveal">How it works</h2>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <div class="step-title">Enemies spawn in waves</div>
+          <div class="step-desc">Each wave spawns a mix of enemy types — Normal, Fast, Slow, Hidden, Armored, Breaker and more. They follow a fixed path and get tougher every round.</div>
+        </div>
+      </div>
+      <div class="step-line reveal"></div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <div class="step-title">Place & upgrade towers</div>
+          <div class="step-desc">Choose from 14 tower types — Assassin, Accelerator, Archer, Lifestealer, Sledger, Gladiator, Slasher and more. Each has up to 6 upgrade levels.</div>
+        </div>
+      </div>
+      <div class="step-line reveal"></div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <div class="step-title">Survive the final boss</div>
+          <div class="step-desc">Easy ends with Grave Digger (5,000 HP). Fallen builds to the Fallen King (175,000 HP). Frosty culminates in the Frost Spirit (500,000 HP).</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOWERS -->
+<section class="section" id="towers">
+  <div class="container section-inner">
+    <div class="section-tag reveal">// towers</div>
+    <h2 class="section-title reveal">Tower roster</h2>
+    <p class="section-text reveal">14 unique towers, each with distinct mechanics and up to 6 upgrade levels.</p>
+    <div class="tower-grid reveal">
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Assassin</div><div class="tower-cost">300 💰</div></div><div class="tower-desc">Single-target melee. Whirlwind AoE at lv2. Hidden detection at lv1. Max 5.</div><div class="tower-stats"><span class="tstat">DMG 4.5→28.5</span><span class="tstat">5 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Accelerator</div><div class="tower-cost">5000 💰</div></div><div class="tower-desc">Purple laser beam. Dual target at lv4+. Hidden detection at lv1. Max 5.</div><div class="tower-stats"><span class="tstat">DMG 12→36</span><span class="tstat">6 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Archer</div><div class="tower-cost">400 💰</div></div><div class="tower-desc">Homing pierce arrows. Flame/Ice modes. Hidden detection at lv4. Max 4.</div><div class="tower-stats"><span class="tstat">Pierce 2→6</span><span class="tstat">6 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Lifestealer</div><div class="tower-cost">400 💰</div></div><div class="tower-desc">Earns bonus coins equal to 10–45% of enemy max HP on kill. Max 4.</div><div class="tower-stats"><span class="tstat">Economy</span><span class="tstat">6 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Frostcelerator</div><div class="tower-cost">3500 💰</div></div><div class="tower-desc">Ice laser hitting 4 targets. Slows 25%, freezes after 1000 cumulative dmg. Max 1.</div><div class="tower-stats"><span class="tstat">Slow + Freeze</span><span class="tstat">5 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Red Ball</div><div class="tower-cost">1000 💰</div></div><div class="tower-desc">Physically leaps at enemies. Tracks live position. Hidden detection at lv2. Max 4.</div><div class="tower-stats"><span class="tstat">DMG 15→150</span><span class="tstat">5 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Freezer</div><div class="tower-cost">400 💰</div></div><div class="tower-desc">Homing ice bullets that slow 5–15% for 3–5 seconds. Max 6.</div><div class="tower-stats"><span class="tstat">Slow</span><span class="tstat">5 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Frost Blaster</div><div class="tower-cost">800 💰</div></div><div class="tower-desc">Piercing ice bullet. Armor shred at lv2. Defense drop at lv4. Max 14.</div><div class="tower-stats"><span class="tstat">Pierce + Armor</span><span class="tstat">5 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Sledger</div><div class="tower-cost">950 💰</div></div><div class="tower-desc">AoE hammer swing. Slow ramp → freeze (lv3). Double dmg frozen (lv4). Max 6.</div><div class="tower-stats"><span class="tstat">AoE + Freeze</span><span class="tstat">6 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Gladiator</div><div class="tower-cost">500 💰</div></div><div class="tower-desc">180° sword arc hitting up to 10 enemies. Hidden detection at lv2. Max 2.</div><div class="tower-stats"><span class="tstat">AoE Melee</span><span class="tstat">6 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Toxic Gunner</div><div class="tower-cost">525 💰</div></div><div class="tower-desc">Burst fire with poison DoT + slow stacks + armor reduction. Max 3.</div><div class="tower-stats"><span class="tstat">Poison + Slow</span><span class="tstat">5 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Slasher</div><div class="tower-cost">1700 💰</div></div><div class="tower-desc">Crit every 3rd hit (×1.75→×4.0). Bleed stacks 0.5% max HP/tick at lv2+. Max 3.</div><div class="tower-stats"><span class="tstat">Crit + Bleed</span><span class="tstat">5 levels</span></div></div>
+      <div class="tower-card"><div class="tower-header"><div class="tower-name">Farm</div><div class="tower-cost">250 💰</div></div><div class="tower-desc">Passive income 50→1600 coins per wave. No attack. Max 8.</div><div class="tower-stats"><span class="tstat">Economy</span><span class="tstat">6 levels</span></div></div>
+      <div class="tower-card tower-card-exclusive"><div class="tower-header"><div class="tower-name">xw5yt <span class="excl-badge">EXCLUSIVE</span></div><div class="tower-cost">5000 💰</div></div><div class="tower-desc">Green laser with 3 unique abilities. Sandbox only. Max 1.</div><div class="tower-stats"><span class="tstat">Sandbox Only</span><span class="tstat">6 levels</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section section-alt" id="features">
+  <div class="container section-inner">
+    <div class="section-tag reveal">// features</div>
+    <h2 class="section-title reveal">What's inside</h2>
+    <div class="feat-grid reveal">
+      <div class="feat-item"><span class="feat-dot"></span>4 game modes — Easy, Fallen, Frosty, Sandbox</div>
+      <div class="feat-item"><span class="feat-dot"></span>14 unique towers with up to 6 upgrade levels</div>
+      <div class="feat-item"><span class="feat-dot"></span>40+ enemy types across all modes</div>
+      <div class="feat-item"><span class="feat-dot"></span>Multiplayer co-op (LAN + ngrok support)</div>
+      <div class="feat-item"><span class="feat-dot"></span>Three map layouts — Straight, Zigzag, Frosty</div>
+      <div class="feat-item"><span class="feat-dot"></span>Persistent save system (savegame.json)</div>
+      <div class="feat-item"><span class="feat-dot"></span>7 unlockable achievements</div>
+      <div class="feat-item"><span class="feat-dot"></span>Floating damage text and visual effects</div>
+      <div class="feat-item"><span class="feat-dot"></span>Runs at 60 FPS on 1920×1080</div>
+      <div class="feat-item"><span class="feat-dot"></span>Lightweight — no engine, pure Pygame</div>
+      <div class="feat-item"><span class="feat-dot"></span>Speedrun-friendly with timer support</div>
+      <div class="feat-item"><span class="feat-dot"></span>Full Wiki available on this site</div>
+    </div>
+  </div>
+</section>
+
+<!-- WIKI CTA -->
+<section class="section" id="wiki-cta">
+  <div class="container section-inner cta-inner">
+    <div class="cta-glow" style="background:radial-gradient(circle,rgba(251,191,36,.15),transparent 70%)"></div>
+    <div class="section-tag reveal" style="color:#fbbf24">// wiki</div>
+    <h2 class="section-title reveal">Need help or info?</h2>
+    <p class="section-text reveal">
+      The <span class="hl2">pyTDS Wiki</span> has complete stats for every tower, every enemy, all game modes, achievements and multiplayer guide — all pulled directly from the game's source code.
+    </p>
+    <a href="wiki/index.html" class="button button-cta reveal">
+      <span class="btn-bg btn-bg-wiki"></span>
+      <span class="btn-content">
+        <span class="btn-text">Open Wiki</span>
+        <span class="btn-icon">
+          <svg class="svg svg-wiki" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- SPEEDRUN CTA -->
+<section class="section section-cta" id="speedrun-cta">
+  <div class="container section-inner cta-inner">
+    <div class="cta-glow"></div>
+    <div class="section-tag reveal" style="color:var(--accent2)">// speedrun</div>
+    <h2 class="section-title reveal">Think you're fast?</h2>
+    <p class="section-text reveal">
+      Compete on the <span class="hl2">pyTDS Speedrun</span> leaderboard. Submit video proof of your run,
+      choose a category — Any%, 100%, Wave 30, No Hit, Hardcore, or Frost — and see where you rank.
+    </p>
+    <a href="speedrun.html" class="button button-cta reveal">
+      <span class="btn-bg btn-bg-sr"></span>
+      <span class="btn-content">
+        <span class="btn-text">Go to Speedrun Board</span>
+        <span class="btn-icon">
+          <svg class="svg svg-sr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="footer-logo"><span class="title-py">py</span>TDS</span>
+    <span class="footer-copy">Open source · Built with Python & Pygame · 2025</span>
+    <a href="https://github.com/xw5yt/pytdssite" class="footer-gh" target="_blank">GitHub ↗</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

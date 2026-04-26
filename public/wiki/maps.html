@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maps — pyTDS Wiki</title>
+<link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><span class="logo-py">py</span><span class="logo-tds">TDS</span><span class="logo-wiki">Wiki</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <div class="nav-section-title">Getting Started</div>
+      <a href="index.html" class="nav-link ">🏠 Home</a>
+      <a href="modes.html" class="nav-link ">🎮 Game Modes</a>
+      <a href="maps.html" class="nav-link active">🗺️ Maps</a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-title">Towers</div>
+      <a href="towers.html" class="nav-link ">🗼 All Towers</a>
+      <a href="tower-assassin.html" class="nav-link nav-sub ">Assassin</a>
+      <a href="tower-accelerator.html" class="nav-link nav-sub ">Accelerator</a>
+      <a href="tower-archer.html" class="nav-link nav-sub ">Archer</a>
+      <a href="tower-lifestealer.html" class="nav-link nav-sub ">Lifestealer</a>
+      <a href="tower-frostcelerator.html" class="nav-link nav-sub ">Frostcelerator</a>
+      <a href="tower-redball.html" class="nav-link nav-sub ">Red Ball</a>
+      <a href="tower-freezer.html" class="nav-link nav-sub ">Freezer</a>
+      <a href="tower-frostblaster.html" class="nav-link nav-sub ">Frost Blaster</a>
+      <a href="tower-sledger.html" class="nav-link nav-sub ">Sledger</a>
+      <a href="tower-gladiator.html" class="nav-link nav-sub ">Gladiator</a>
+      <a href="tower-toxicgunner.html" class="nav-link nav-sub ">Toxic Gunner</a>
+      <a href="tower-slasher.html" class="nav-link nav-sub ">Slasher</a>
+      <a href="tower-farm.html" class="nav-link nav-sub ">Farm</a>
+      <a href="tower-xw5yt.html" class="nav-link nav-sub nav-exclusive ">xw5yt ✦</a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-title">Enemies</div>
+      <a href="enemies-easy.html" class="nav-link ">🟢 Easy Enemies</a>
+      <a href="enemies-fallen.html" class="nav-link ">🟣 Fallen Enemies</a>
+      <a href="enemies-frosty.html" class="nav-link ">🔵 Frosty Enemies</a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-title">Other</div>
+      <a href="achievements.html" class="nav-link ">🏆 Achievements</a>
+      <a href="multiplayer.html" class="nav-link ">🌐 Multiplayer</a>
+          </div>
+  </nav>
+  <a href="../index.html" class="sidebar-main-link" target="_blank">← Main Site</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="breadcrumb">pyTDS Wiki / <span>Maps</span></div>
+    <div class="topbar-right">
+      <div class="search-wrap">
+        <input type="text" id="searchInput" class="search" placeholder="Search wiki..." oninput="doSearch(this.value)" onkeydown="if(event.key==='Escape')clearSearch()"/>
+        <div class="search-results hidden" id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+  <article class="content">
+    <div class="page-header">
+      <h1 class="page-title">Maps</h1>
+      <p class="page-sub">Three map layouts — each changes how enemies move and where you can place towers</p>
+    </div>
+    <div class="wiki-section">
+      <h2>Straight</h2>
+      <p>The default map. Enemies enter from the left edge and march horizontally to the right edge along a single path at Y=432 (center-ish). Available in Easy, Fallen, and Sandbox.</p>
+      <div class="info-box"><strong>Tip:</strong> The straight path gives maximum tower coverage — towers placed near the middle of the screen cover the most path distance.</div>
+    </div>
+    <div class="wiki-section">
+      <h2>Zigzag</h2>
+      <p>Enemies follow a multi-segment path that snakes across the full screen. Waypoints:</p>
+      <div class="quick-table-wrap">
+        <table class="wiki-table">
+          <thead><tr><th>Segment</th><th>Direction</th><th>From</th><th>To</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>→ Right</td><td>Left edge (−45, 290)</td><td>(400, 290)</td></tr>
+            <tr><td>2</td><td>↓ Down</td><td>(400, 290)</td><td>(400, 846)</td></tr>
+            <tr><td>3</td><td>→ Right</td><td>(400, 846)</td><td>(766, 846)</td></tr>
+            <tr><td>4</td><td>↑ Up</td><td>(766, 846)</td><td>(766, 106)</td></tr>
+            <tr><td>5</td><td>→ Right</td><td>(766, 106)</td><td>(1167, 106)</td></tr>
+            <tr><td>6</td><td>↓ Down</td><td>(1167, 106)</td><td>(1167, 846)</td></tr>
+            <tr><td>7</td><td>→ Exit</td><td>(1167, 846)</td><td>Right edge</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="wiki-section">
+      <h2>Frosty (4-lane)</h2>
+      <p>Exclusive to Frosty mode. Four lanes converge on a central point at approximately (960, 480). Each lane approaches from a different screen edge:</p>
+      <ul>
+        <li><strong>Lane 0 — Top:</strong> enters top-center, moves straight down</li>
+        <li><strong>Lane 1 — Bottom:</strong> enters bottom-center, moves straight up</li>
+        <li><strong>Lane 2 — Left:</strong> enters left side, moves right</li>
+        <li><strong>Lane 3 — Right:</strong> enters right side, moves left</li>
+      </ul>
+      <div class="warn-box"><strong>Note:</strong> All four lanes converge at the same center point. Towers placed at the center cover all 4 lanes simultaneously.</div>
+    </div>
+  </article>
+</main>
+<script src="wiki.js"></script>
+</body>
+</html>

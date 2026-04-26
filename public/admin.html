@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pyTDS — Admin Panel</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="noise"></div>
+<div class="grid-lines"></div>
+<div class="orb orb-1" style="background:radial-gradient(circle,#ef4444,transparent 70%);opacity:.1"></div>
+<div class="orb orb-2" style="background:radial-gradient(circle,#f97316,transparent 70%);opacity:.08"></div>
+
+<!-- ═══ ADMIN LOGIN ═══ -->
+<div class="auth-overlay" id="adminLoginOverlay">
+  <div class="auth-card">
+    <a href="index.html" class="auth-back">← Back to pyTDS</a>
+    <div class="auth-logo">
+      <span class="title-py">py</span>TDS
+      <span class="admin-label">Admin</span>
+    </div>
+    <h2 class="auth-title">Moderator access</h2>
+    <p class="auth-sub">Restricted area — authorised personnel only</p>
+    <div class="auth-form">
+      <div class="field">
+        <label>Login</label>
+        <input type="text" id="adminLogin" placeholder="username" autocomplete="off"/>
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" id="adminPass" placeholder="••••••••"/>
+      </div>
+      <div class="auth-error" id="adminLoginError"></div>
+      <button class="auth-btn" onclick="doAdminLogin()">Enter Panel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ADMIN PANEL ═══ -->
+<div class="admin-app hidden" id="adminApp">
+
+  <!-- Sidebar -->
+  <aside class="admin-sidebar">
+    <div class="sidebar-logo">
+      <span class="title-py">py</span>TDS
+      <span class="admin-label">Admin</span>
+    </div>
+    <nav class="sidebar-nav">
+      <button class="sidebar-btn active" onclick="switchTab('pending', this)">
+        <span class="sidebar-icon">⏳</span>
+        Pending Runs
+        <span class="sidebar-badge" id="pendingCount">0</span>
+      </button>
+      <button class="sidebar-btn" onclick="switchTab('approved', this)">
+        <span class="sidebar-icon">✅</span>
+        Approved Runs
+      </button>
+      <button class="sidebar-btn" onclick="switchTab('rejected', this)">
+        <span class="sidebar-icon">❌</span>
+        Rejected Runs
+      </button>
+      <button class="sidebar-btn" onclick="switchTab('users', this)">
+        <span class="sidebar-icon">👥</span>
+        Users
+      </button>
+    </nav>
+    <button class="admin-logout-btn" onclick="doAdminLogout()">Log out</button>
+  </aside>
+
+  <!-- Main content -->
+  <main class="admin-main">
+
+    <div class="admin-header">
+      <div>
+        <div class="admin-header-title" id="tabTitle">Pending Runs</div>
+        <div class="admin-header-sub" id="tabSub">Runs waiting for review</div>
+      </div>
+      <div class="admin-stats" id="adminStats"></div>
+    </div>
+
+    <!-- Pending -->
+    <div class="tab-content" id="tab-pending">
+      <div class="runs-list" id="pendingList"></div>
+      <div class="empty-state hidden" id="pendingEmpty">
+        <div class="empty-icon">🎉</div>
+        <div>No pending runs — all clear!</div>
+      </div>
+    </div>
+
+    <!-- Approved -->
+    <div class="tab-content hidden" id="tab-approved">
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead><tr>
+            <th>#</th><th>Runner</th><th>Category</th><th>Time</th><th>Date</th><th>Video</th><th>Actions</th>
+          </tr></thead>
+          <tbody id="approvedBody"></tbody>
+        </table>
+        <div class="empty-state hidden" id="approvedEmpty">
+          <div class="empty-icon">📋</div><div>No approved runs yet.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rejected -->
+    <div class="tab-content hidden" id="tab-rejected">
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead><tr>
+            <th>#</th><th>Runner</th><th>Category</th><th>Time</th><th>Date</th><th>Reason</th><th>Actions</th>
+          </tr></thead>
+          <tbody id="rejectedBody"></tbody>
+        </table>
+        <div class="empty-state hidden" id="rejectedEmpty">
+          <div class="empty-icon">📋</div><div>No rejected runs.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Users -->
+    <div class="tab-content hidden" id="tab-users">
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead><tr>
+            <th>Username</th><th>Total</th><th>Approved</th><th>Pending</th><th>Rejected</th><th>Actions</th>
+          </tr></thead>
+          <tbody id="usersBody"></tbody>
+        </table>
+        <div class="empty-state hidden" id="usersEmpty">
+          <div class="empty-icon">👤</div><div>No registered users.</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ═══ REJECT MODAL ═══ -->
+<div class="modal-overlay hidden" id="rejectModal">
+  <div class="auth-card" style="max-width:420px">
+    <div class="auth-title" style="margin-bottom:6px">Reject run</div>
+    <p class="auth-sub">Optionally provide a reason — the runner will see it.</p>
+    <div class="auth-form">
+      <div class="field">
+        <label>Reason (optional)</label>
+        <input type="text" id="rejectReason" placeholder="e.g. No timer visible, spliced footage..."/>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:4px">
+        <button class="auth-btn" style="flex:1;background:linear-gradient(135deg,#ef4444,#f97316)" onclick="confirmReject()">Reject</button>
+        <button class="auth-btn btn-cancel" style="flex:1" onclick="closeRejectModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

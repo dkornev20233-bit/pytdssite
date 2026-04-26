@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gladiator — pyTDS Wiki</title><link rel="stylesheet" href="wiki.css"></head>
+<body><aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><span class="logo-py">py</span><span class="logo-tds">TDS</span><span class="logo-wiki">Wiki</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section"><a href="index.html" class="nav-link ">🏠 Home</a>
+<a href="modes.html" class="nav-link ">🎮 Game Modes</a>
+<a href="maps.html" class="nav-link ">🗺️ Maps</a>
+<a href="towers.html" class="nav-link ">🗼 All Towers</a>
+<a href="enemies-easy.html" class="nav-link ">🟢 Easy Enemies</a>
+<a href="enemies-fallen.html" class="nav-link ">🟣 Fallen Enemies</a>
+<a href="enemies-frosty.html" class="nav-link ">🔵 Frosty Enemies</a>
+<a href="achievements.html" class="nav-link ">🏆 Achievements</a>
+<a href="multiplayer.html" class="nav-link ">🌐 Multiplayer</a>
+</div>
+    <div class="nav-section">
+      <div class="nav-section-title">Towers</div>
+      <a href="tower-assassin.html" class="nav-link nav-sub ">Assassin</a>
+<a href="tower-accelerator.html" class="nav-link nav-sub ">Accelerator</a>
+<a href="tower-archer.html" class="nav-link nav-sub ">Archer</a>
+<a href="tower-lifestealer.html" class="nav-link nav-sub ">Lifestealer</a>
+<a href="tower-frostcelerator.html" class="nav-link nav-sub ">Frostcelerator</a>
+<a href="tower-redball.html" class="nav-link nav-sub ">Red Ball</a>
+<a href="tower-freezer.html" class="nav-link nav-sub ">Freezer</a>
+<a href="tower-frostblaster.html" class="nav-link nav-sub ">Frost Blaster</a>
+<a href="tower-sledger.html" class="nav-link nav-sub ">Sledger</a>
+<a href="tower-gladiator.html" class="nav-link nav-sub active">Gladiator</a>
+<a href="tower-toxicgunner.html" class="nav-link nav-sub ">Toxic Gunner</a>
+<a href="tower-slasher.html" class="nav-link nav-sub ">Slasher</a>
+<a href="tower-farm.html" class="nav-link nav-sub ">Farm</a>
+<a href="tower-xw5yt.html" class="nav-link nav-sub nav-exclusive ">xw5yt ✦</a>
+
+    </div>
+  </nav>
+  <a href="../index.html" class="sidebar-main-link" target="_blank">← Main Site</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="breadcrumb">pyTDS Wiki / Towers / <span>Gladiator</span></div>
+    <div class="topbar-right"><div class="search-wrap">
+      <input type="text" id="searchInput" class="search" placeholder="Search wiki..." oninput="doSearch(this.value)" onkeydown="if(event.key==='Escape')clearSearch()"/>
+      <div class="search-results hidden" id="searchResults"></div>
+    </div></div>
+  </div>
+  <article class="content">
+    <div class="page-header">
+      <h1 class="page-title">Gladiator </h1>
+    </div>
+    <div class="tower-hero">
+      <div class="tower-hero-icon" style="background:rgba(180,140,60,0.25);font-size:32px">⚔️</div>
+      <div class="tower-hero-info">
+        <div class="tower-hero-name">Gladiator</div>
+        <div class="tower-hero-meta">
+          <div class="tower-hero-stat">Cost <strong>500 💰</strong></div>
+          <div class="tower-hero-stat">Max on field <strong>2</strong></div>
+          <div class="tower-hero-stat">Upgrade levels <strong>6</strong></div>
+        </div>
+      </div>
+    </div><div class="wiki-section"><h2>Upgrade table</h2>
+    <div class="upgrade-table-wrap"><table class="upgrade-table">
+      <thead><tr><th>Level</th><th>Cost</th><th>DMG</th><th>Swing Rate (s)</th><th>Range (tiles)</th><th>Max Hits (180° arc)</th><th>Hidden Det.</th></tr></thead>
+      <tbody><tr><td><span class='lv-badge lv-place'>Place</span></td><td class="cost-cell">500</td><td>5</td><td>1.008</td><td>5.0</td><td>3</td><td>No</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 1</span></td><td class="cost-cell">300</td><td>7</td><td>1.008</td><td>5.0</td><td>3</td><td>No</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 2</span></td><td class="cost-cell">550</td><td>12</td><td>0.758</td><td>5.0</td><td>5</td><td>✅ Yes</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 3</span></td><td class="cost-cell">1500</td><td>17</td><td>0.758</td><td>5.0</td><td>7</td><td>✅ Yes</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 4</span></td><td class="cost-cell">2500</td><td>37</td><td>0.508</td><td>7.0</td><td>9</td><td>✅ Yes</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 5</span></td><td class="cost-cell">6000</td><td>57</td><td>0.508</td><td>8.0</td><td>10</td><td>✅ Yes</td></tr></tbody>
+    </table></div></div><div class="wiki-section"><h2>Mechanics</h2><p>Swings a sword in a <strong>180° arc</strong> hitting all enemies in the half-circle in front of it.</p><ul><li>The swing arc is <strong>centered on the current target</strong> — positioning the tower optimally matters.</li><li>Hidden Detection unlocks at <strong>Lv2</strong>.</li><li><strong>Max 2 on field</strong> — very limited placement.</li><li>Has a <strong>Stun Block</strong> mechanic — can block one stun effect from an enemy ability, then goes on cooldown.</li><li>Swing arc trail is visually shown for 0.18 seconds after each swing.</li></ul><div class="warn-box">Max 2 on field — place them at choke points where the arc covers the most enemies.</div></div><div class="wiki-section"><h2>Tips</h2><ul><li>Excellent on Zigzag map where enemies turn corners — the 180° arc can hit enemies coming from two directions.</li><li>Lv4 is a big DPS jump (37 dmg, range 7, faster swing) — worth prioritizing.</li><li>Despite high single swing damage, the 1.0s swing rate limits burst DPS — supplement with Accelerator.</li><li>At Lv5 hits 10 enemies per swing with 57 DMG = 570 total damage per swing against grouped enemies.</li></ul></div></article>
+</main><script src="wiki.js"></script></body></html>

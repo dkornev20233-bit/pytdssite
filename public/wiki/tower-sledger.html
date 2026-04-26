@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sledger — pyTDS Wiki</title><link rel="stylesheet" href="wiki.css"></head>
+<body><aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><span class="logo-py">py</span><span class="logo-tds">TDS</span><span class="logo-wiki">Wiki</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section"><a href="index.html" class="nav-link ">🏠 Home</a>
+<a href="modes.html" class="nav-link ">🎮 Game Modes</a>
+<a href="maps.html" class="nav-link ">🗺️ Maps</a>
+<a href="towers.html" class="nav-link ">🗼 All Towers</a>
+<a href="enemies-easy.html" class="nav-link ">🟢 Easy Enemies</a>
+<a href="enemies-fallen.html" class="nav-link ">🟣 Fallen Enemies</a>
+<a href="enemies-frosty.html" class="nav-link ">🔵 Frosty Enemies</a>
+<a href="achievements.html" class="nav-link ">🏆 Achievements</a>
+<a href="multiplayer.html" class="nav-link ">🌐 Multiplayer</a>
+</div>
+    <div class="nav-section">
+      <div class="nav-section-title">Towers</div>
+      <a href="tower-assassin.html" class="nav-link nav-sub ">Assassin</a>
+<a href="tower-accelerator.html" class="nav-link nav-sub ">Accelerator</a>
+<a href="tower-archer.html" class="nav-link nav-sub ">Archer</a>
+<a href="tower-lifestealer.html" class="nav-link nav-sub ">Lifestealer</a>
+<a href="tower-frostcelerator.html" class="nav-link nav-sub ">Frostcelerator</a>
+<a href="tower-redball.html" class="nav-link nav-sub ">Red Ball</a>
+<a href="tower-freezer.html" class="nav-link nav-sub ">Freezer</a>
+<a href="tower-frostblaster.html" class="nav-link nav-sub ">Frost Blaster</a>
+<a href="tower-sledger.html" class="nav-link nav-sub active">Sledger</a>
+<a href="tower-gladiator.html" class="nav-link nav-sub ">Gladiator</a>
+<a href="tower-toxicgunner.html" class="nav-link nav-sub ">Toxic Gunner</a>
+<a href="tower-slasher.html" class="nav-link nav-sub ">Slasher</a>
+<a href="tower-farm.html" class="nav-link nav-sub ">Farm</a>
+<a href="tower-xw5yt.html" class="nav-link nav-sub nav-exclusive ">xw5yt ✦</a>
+
+    </div>
+  </nav>
+  <a href="../index.html" class="sidebar-main-link" target="_blank">← Main Site</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="breadcrumb">pyTDS Wiki / Towers / <span>Sledger</span></div>
+    <div class="topbar-right"><div class="search-wrap">
+      <input type="text" id="searchInput" class="search" placeholder="Search wiki..." oninput="doSearch(this.value)" onkeydown="if(event.key==='Escape')clearSearch()"/>
+      <div class="search-results hidden" id="searchResults"></div>
+    </div></div>
+  </div>
+  <article class="content">
+    <div class="page-header">
+      <h1 class="page-title">Sledger </h1>
+    </div>
+    <div class="tower-hero">
+      <div class="tower-hero-icon" style="background:rgba(80,180,255,0.25);font-size:32px">🔨</div>
+      <div class="tower-hero-info">
+        <div class="tower-hero-name">Sledger</div>
+        <div class="tower-hero-meta">
+          <div class="tower-hero-stat">Cost <strong>950 💰</strong></div>
+          <div class="tower-hero-stat">Max on field <strong>6</strong></div>
+          <div class="tower-hero-stat">Upgrade levels <strong>6</strong></div>
+        </div>
+      </div>
+    </div><div class="wiki-section"><h2>Upgrade table</h2>
+    <div class="upgrade-table-wrap"><table class="upgrade-table">
+      <thead><tr><th>Level</th><th>Cost</th><th>DMG</th><th>Swing Rate (s)</th><th>Range (tiles)</th><th>Max Hits</th><th>Slow/hit</th><th>Max Slow</th><th>Slow Dur</th><th>Freeze Dur</th><th>2× Frozen</th><th>Aftershock</th><th>Hidden Det.</th></tr></thead>
+      <tbody><tr><td><span class='lv-badge lv-place'>Place</span></td><td class="cost-cell">950</td><td>7</td><td>1.208</td><td>7</td><td>2</td><td>15%</td><td>45%</td><td>4s</td><td>—</td><td>No</td><td>—</td><td>No</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 1</span></td><td class="cost-cell">400</td><td>11</td><td>1.208</td><td>7</td><td>2</td><td>25%</td><td>45%</td><td>4s</td><td>—</td><td>No</td><td>—</td><td>No</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 2</span></td><td class="cost-cell">1650</td><td>24</td><td>1.208</td><td>7</td><td>3</td><td>25%</td><td>45%</td><td>4s</td><td>—</td><td>No</td><td>—</td><td>No</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 3</span></td><td class="cost-cell">3200</td><td>24</td><td>1.208</td><td>7</td><td>3</td><td>30%</td><td>60%</td><td>4s</td><td>✅ 1.5s</td><td>No</td><td>—</td><td>No</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 4</span></td><td class="cost-cell">8250</td><td>24</td><td>1.208</td><td>7</td><td>4</td><td>45%</td><td>80%</td><td>5s</td><td>✅ 2.5s</td><td>✅ Yes</td><td>—</td><td>No</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 5</span></td><td class="cost-cell">22500</td><td>24</td><td>1.208</td><td>7</td><td>6</td><td>80%</td><td>80%</td><td>6s</td><td>✅ 1.75s</td><td>✅ Yes</td><td>✅ 20%</td><td>No</td></tr></tbody>
+    </table></div></div><div class="wiki-section"><h2>Mechanics</h2><p>Swings a <strong>hammer in an AoE arc</strong> hitting up to N enemies per swing.</p><ul><li>Each hit adds a <strong>slow stack</strong> — slow accumulates per enemy up to the Max Slow cap.</li><li>Once slow reaches <strong>Max Slow</strong> → enemy is <strong>frozen</strong> for Freeze Dur (Lv3+).</li><li>At Lv4+ deals <strong>double damage</strong> to already-frozen or chilled enemies.</li><li>At Lv5 each swing has a 20% chance to launch an <strong>aftershock</strong> projectile dealing 20% bonus damage.</li><li>At Lv5 each swing reduces target armor by up to <strong>10%</strong> (capped at 33% total).</li><li>Does <strong>NOT</strong> gain Hidden Detection at any level.</li></ul><div class="info-box">Max Slow cap means once an enemy is frozen and thaws, its slow resets — you can re-freeze by hitting again.</div></div><div class="wiki-section"><h2>Tips</h2><ul><li>Strongest AoE tower for slowing — pairs exceptionally well with Frost Blaster (which deals 2× to frozen).</li><li>Place centrally on the path to maximize hits per swing.</li><li>Lv3 is the freeze unlock — a big power spike worth prioritizing.</li><li>Lv5 aftershock is rare (20%) but the armor drop per swing is consistent and strong.</li></ul></div></article>
+</main><script src="wiki.js"></script></body></html>

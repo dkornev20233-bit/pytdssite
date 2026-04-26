@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archer — pyTDS Wiki</title><link rel="stylesheet" href="wiki.css"></head>
+<body><aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><span class="logo-py">py</span><span class="logo-tds">TDS</span><span class="logo-wiki">Wiki</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section"><a href="index.html" class="nav-link ">🏠 Home</a>
+<a href="modes.html" class="nav-link ">🎮 Game Modes</a>
+<a href="maps.html" class="nav-link ">🗺️ Maps</a>
+<a href="towers.html" class="nav-link ">🗼 All Towers</a>
+<a href="enemies-easy.html" class="nav-link ">🟢 Easy Enemies</a>
+<a href="enemies-fallen.html" class="nav-link ">🟣 Fallen Enemies</a>
+<a href="enemies-frosty.html" class="nav-link ">🔵 Frosty Enemies</a>
+<a href="achievements.html" class="nav-link ">🏆 Achievements</a>
+<a href="multiplayer.html" class="nav-link ">🌐 Multiplayer</a>
+</div>
+    <div class="nav-section">
+      <div class="nav-section-title">Towers</div>
+      <a href="tower-assassin.html" class="nav-link nav-sub ">Assassin</a>
+<a href="tower-accelerator.html" class="nav-link nav-sub ">Accelerator</a>
+<a href="tower-archer.html" class="nav-link nav-sub active">Archer</a>
+<a href="tower-lifestealer.html" class="nav-link nav-sub ">Lifestealer</a>
+<a href="tower-frostcelerator.html" class="nav-link nav-sub ">Frostcelerator</a>
+<a href="tower-redball.html" class="nav-link nav-sub ">Red Ball</a>
+<a href="tower-freezer.html" class="nav-link nav-sub ">Freezer</a>
+<a href="tower-frostblaster.html" class="nav-link nav-sub ">Frost Blaster</a>
+<a href="tower-sledger.html" class="nav-link nav-sub ">Sledger</a>
+<a href="tower-gladiator.html" class="nav-link nav-sub ">Gladiator</a>
+<a href="tower-toxicgunner.html" class="nav-link nav-sub ">Toxic Gunner</a>
+<a href="tower-slasher.html" class="nav-link nav-sub ">Slasher</a>
+<a href="tower-farm.html" class="nav-link nav-sub ">Farm</a>
+<a href="tower-xw5yt.html" class="nav-link nav-sub nav-exclusive ">xw5yt ✦</a>
+
+    </div>
+  </nav>
+  <a href="../index.html" class="sidebar-main-link" target="_blank">← Main Site</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="breadcrumb">pyTDS Wiki / Towers / <span>Archer</span></div>
+    <div class="topbar-right"><div class="search-wrap">
+      <input type="text" id="searchInput" class="search" placeholder="Search wiki..." oninput="doSearch(this.value)" onkeydown="if(event.key==='Escape')clearSearch()"/>
+      <div class="search-results hidden" id="searchResults"></div>
+    </div></div>
+  </div>
+  <article class="content">
+    <div class="page-header">
+      <h1 class="page-title">Archer </h1>
+    </div>
+    <div class="tower-hero">
+      <div class="tower-hero-icon" style="background:rgba(160,100,50,0.25);font-size:32px">🏹</div>
+      <div class="tower-hero-info">
+        <div class="tower-hero-name">Archer</div>
+        <div class="tower-hero-meta">
+          <div class="tower-hero-stat">Cost <strong>400 💰</strong></div>
+          <div class="tower-hero-stat">Max on field <strong>4</strong></div>
+          <div class="tower-hero-stat">Upgrade levels <strong>6</strong></div>
+        </div>
+      </div>
+    </div><div class="wiki-section"><h2>Upgrade table</h2>
+    <div class="upgrade-table-wrap"><table class="upgrade-table">
+      <thead><tr><th>Level</th><th>Cost</th><th>DMG</th><th>Firerate (s)</th><th>Range (tiles)</th><th>Pierce</th><th>Hidden Det.</th></tr></thead>
+      <tbody><tr><td><span class='lv-badge lv-place'>Place</span></td><td class="cost-cell">400</td><td>4</td><td>0.65</td><td>5.5</td><td>2</td><td>No</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 1</span></td><td class="cost-cell">350</td><td>4</td><td>0.6</td><td>5.5</td><td>3</td><td>No</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 2</span></td><td class="cost-cell">600</td><td>5</td><td>0.6</td><td>6.0</td><td>3</td><td>No</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 3</span></td><td class="cost-cell">800</td><td>7</td><td>0.6</td><td>6.0</td><td>4</td><td>No</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 4</span></td><td class="cost-cell">1300</td><td>8</td><td>0.6</td><td>6.0</td><td>5</td><td>✅ Yes</td></tr><tr><td><span class='lv-badge lv-badge'>Lv 5</span></td><td class="cost-cell">1700</td><td>10</td><td>0.6</td><td>6.5</td><td>6</td><td>✅ Yes</td></tr></tbody>
+    </table></div></div><div class="wiki-section"><h2>Arrow Modes</h2><p>The Archer has three arrow modes selectable from the tower panel:</p><ul><li><strong>Arrow</strong> (default) — standard piercing arrow, always available.</li><li><strong>Ice Arrow</strong> (unlocks Lv2) — slows enemy to <strong>55% speed</strong> for <strong>0.6 seconds</strong> on hit.</li><li><strong>Flame Arrow</strong> (unlocks Lv3) — applies <strong>fire DoT</strong>: 2 damage every 0.5s for 3 seconds.</li></ul><div class="info-box">Mode switching is done via the buttons in the tower info panel. Arrows home toward the target.</div></div><div class="wiki-section"><h2>Mechanics</h2><ul><li>Fires a <strong>homing arrow</strong> that tracks the locked target.</li><li>After hitting the primary target the arrow continues straight (no re-target).</li><li>Pierce count determines how many enemies one arrow passes through.</li><li>Hidden Detection unlocks at <strong>Lv4</strong>.</li></ul></div><div class="wiki-section"><h2>Tips</h2><ul><li>Ice Arrow is excellent for slowing fast enemies (Scout, Fallen Rusher).</li><li>Flame Arrow deals good DoT against tanky enemies (Fallen Giant, bosses).</li><li>High pierce at Lv5 (6 pierce) makes it great in Straight map where enemies line up.</li><li>Cheap at 400 — good early tower for economy builds.</li></ul></div></article>
+</main><script src="wiki.js"></script></body></html>

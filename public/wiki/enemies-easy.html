@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Easy Enemies — pyTDS Wiki</title><link rel="stylesheet" href="wiki.css"></head>
+<body><aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><span class="logo-py">py</span><span class="logo-tds">TDS</span><span class="logo-wiki">Wiki</span></div>
+  <nav class="sidebar-nav"><div class="nav-section"><a href="index.html" class="nav-link ">🏠 Home</a>
+<a href="modes.html" class="nav-link ">🎮 Game Modes</a>
+<a href="maps.html" class="nav-link ">🗺️ Maps</a>
+<a href="towers.html" class="nav-link ">🗼 All Towers</a>
+<a href="enemies-easy.html" class="nav-link active">🟢 Easy Enemies</a>
+<a href="enemies-fallen.html" class="nav-link ">🟣 Fallen Enemies</a>
+<a href="enemies-frosty.html" class="nav-link ">🔵 Frosty Enemies</a>
+<a href="achievements.html" class="nav-link ">🏆 Achievements</a>
+<a href="multiplayer.html" class="nav-link ">🌐 Multiplayer</a>
+</div></nav>
+  <a href="../index.html" class="sidebar-main-link" target="_blank">← Main Site</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="breadcrumb">pyTDS Wiki / <span>Enemies / Easy</span></div>
+    <div class="topbar-right"><div class="search-wrap">
+      <input type="text" id="searchInput" class="search" placeholder="Search wiki..." oninput="doSearch(this.value)" onkeydown="if(event.key==='Escape')clearSearch()"/>
+      <div class="search-results hidden" id="searchResults"></div>
+    </div></div>
+  </div>
+  <article class="content">    <div class="page-header">
+      <h1 class="page-title">Easy Mode Enemies</h1>
+      <p class="page-sub">20 waves — enemies scale speed with each wave (+3 spd/wave unless noted)</p>
+    </div>
+    <div class="wiki-section"><h2>Regular Enemies</h2><div class="enemy-grid"><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:var(--red)">Normal</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 8</span><span class="estat estat-spd">Spd 55+3/w</span><span class="estat estat-rew">+8💰</span></div>
+      <div class="enemy-card-notes">Base enemy. Used in almost every wave.</div>
+    </div><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:var(--red)">Fast</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 10</span><span class="estat estat-spd">Spd 140+5/w</span><span class="estat estat-rew">+8💰</span></div>
+      <div class="enemy-card-notes">Scout — reaches base quickly. Low HP.</div>
+    </div><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:var(--red)">Slow</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 30</span><span class="estat estat-spd">Spd 28+1/w</span></div>
+      <div class="enemy-card-notes">Tanky. Requires sustained fire.</div>
+    </div><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:var(--green)">Hidden</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 8</span><span class="estat estat-spd">Spd 55+3/w</span><span class="estat estat-hid">Hidden</span></div>
+      <div class="enemy-card-notes">Invisible to most towers. Requires hidden detection.</div>
+    </div><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:var(--red)">Armored</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 25</span><span class="estat estat-spd">Spd 55+3/w</span><span class="estat estat-arm">20% armor</span></div>
+      <div class="enemy-card-notes">20% of all damage is absorbed.</div>
+    </div><div class="enemy-card" style="">
+      <div class="enemy-card-name" style="color:var(--red)">Breaker</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 30</span><span class="estat estat-spd">Spd 55</span></div>
+      <div class="enemy-card-notes">Gold-colored. Medium tank, no special mechanic.</div>
+    </div>    </div></div>
+    <div class="wiki-section"><h2>Bosses</h2><div class="enemy-grid"><div class="enemy-card" style="border: 2px solid rgba(255,200,50,0.35);">
+      <div class="enemy-card-name" style="color:var(--gold)">Normal Boss  👑</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 200</span><span class="estat estat-spd">Spd 55</span><span class="estat estat-rew">+200💰</span></div>
+      <div class="enemy-card-notes">Crown spikes aura. Appears at waves 6–19.</div>
+    </div><div class="enemy-card" style="border: 2px solid rgba(255,200,50,0.35);">
+      <div class="enemy-card-name" style="color:var(--gold)">Slow Boss  👑</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 25</span><span class="estat estat-spd">Spd 28</span></div>
+      <div class="enemy-card-notes">Very large radius (34). Walks slowly.</div>
+    </div><div class="enemy-card" style="border: 2px solid rgba(255,200,50,0.35);">
+      <div class="enemy-card-name" style="color:var(--green)">Hidden Boss  👑</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 200</span><span class="estat estat-spd">Spd 55</span><span class="estat estat-hid">Hidden</span></div>
+      <div class="enemy-card-notes">Normal Boss stats but invisible to most towers.</div>
+    </div><div class="enemy-card" style="border: 2px solid rgba(255,200,50,0.35);">
+      <div class="enemy-card-name" style="color:var(--accent2)">Necromancer  👑</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 360</span><span class="estat estat-spd">Spd 55</span></div>
+      <div class="enemy-card-notes">Summons random enemies from breaker pool every 5s.</div>
+    </div><div class="enemy-card" style="border: 2px solid rgba(255,200,50,0.35);">
+      <div class="enemy-card-name" style="color:var(--gold)">Grave Digger  👑</div>
+      <div class="enemy-card-stats"><span class="estat estat-hp">HP 5,000</span><span class="estat estat-spd">Spd 30</span></div>
+      <div class="enemy-card-notes">Final boss. Wave 20. Click the shrinking BounceCircles during phase 2 to deal bonus damage. Rotating shovel animation.</div>
+    </div>    </div></div>
+    <div class="wiki-section"><h2>Wave Reference</h2>
+    <div class="quick-table-wrap"><table class="wiki-table">
+      <thead><tr><th>Wave</th><th>Enemies</th><th>Wave $</th><th>Bonus $</th></tr></thead><tbody>
+      <tr><td>1</td><td>3× Normal</td><td>200</td><td>70</td></tr>
+      <tr><td>2</td><td>5× Normal</td><td>350</td><td>122</td></tr>
+      <tr><td>3</td><td>8× Normal, 4× Fast</td><td>500</td><td>175</td></tr>
+      <tr><td>4</td><td>4× Fast, 6× Normal, 4× Slow</td><td>650</td><td>227</td></tr>
+      <tr><td>5</td><td>5× Normal, 6× Slow</td><td>800</td><td>280</td></tr>
+      <tr><td>6</td><td>4× Slow, 8× Fast, 1× Normal Boss</td><td>950</td><td>332</td></tr>
+      <tr><td>7</td><td>6× Slow, 10× Fast, 1× Normal Boss</td><td>1100</td><td>385</td></tr>
+      <tr><td>8</td><td>10× Normal, 8× Slow, 6× Hidden</td><td>1250</td><td>437</td></tr>
+      <tr><td>9</td><td>1× Normal Boss, 3× Slow, 10× Hidden, 7× Fast</td><td>1400</td><td>489</td></tr>
+      <tr><td>10</td><td>7× Slow, 7× Fast, 5× Breaker</td><td>1550</td><td>542</td></tr>
+      <tr><td>11</td><td>10× Breaker, 8× Hidden, 1× Normal Boss</td><td>1700</td><td>595</td></tr>
+      <tr><td>12</td><td>1× Necromancer, 10× Hidden, 10× Normal, 5× Slow, 6× Fast</td><td>1850</td><td>647</td></tr>
+      <tr><td>13</td><td>9× Armored, 10× Breaker</td><td>2000</td><td>700</td></tr>
+      <tr><td>14</td><td>12× Armored, 10× Hidden, 15× Breaker, 2× Normal Boss</td><td>2150</td><td>752</td></tr>
+      <tr><td>15</td><td>15× Armored, 3× Normal Boss, 2× Necromancer</td><td>2300</td><td>805</td></tr>
+      <tr><td>16</td><td>1× Slow Boss, 20× Normal</td><td>2450</td><td>857</td></tr>
+      <tr><td>17</td><td>30× Breaker, 1× Hidden Boss</td><td>2600</td><td>909</td></tr>
+      <tr><td>18</td><td>10× Armored, 1× Necromancer, 10× Fast, 10× Hidden</td><td>2750</td><td>962</td></tr>
+      <tr><td>19</td><td>10× Breaker, 1× Normal Boss, 1× Slow Boss, 3× Slow</td><td>2900</td><td>1014</td></tr>
+      <tr><td>20</td><td>Mass wave + <strong>Grave Digger</strong></td><td>5000</td><td>0</td></tr>
+      </tbody></table></div></div></article>
+</main><script src="wiki.js"></script></body></html>

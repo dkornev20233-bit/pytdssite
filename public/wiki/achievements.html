@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achievements — pyTDS Wiki</title><link rel="stylesheet" href="wiki.css"></head>
+<body><aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><span class="logo-py">py</span><span class="logo-tds">TDS</span><span class="logo-wiki">Wiki</span></div>
+  <nav class="sidebar-nav"><div class="nav-section"><a href="index.html" class="nav-link ">🏠 Home</a>
+<a href="modes.html" class="nav-link ">🎮 Game Modes</a>
+<a href="maps.html" class="nav-link ">🗺️ Maps</a>
+<a href="towers.html" class="nav-link ">🗼 All Towers</a>
+<a href="enemies-easy.html" class="nav-link ">🟢 Easy Enemies</a>
+<a href="enemies-fallen.html" class="nav-link ">🟣 Fallen Enemies</a>
+<a href="enemies-frosty.html" class="nav-link ">🔵 Frosty Enemies</a>
+<a href="achievements.html" class="nav-link active">🏆 Achievements</a>
+<a href="multiplayer.html" class="nav-link ">🌐 Multiplayer</a>
+</div></nav>
+  <a href="../index.html" class="sidebar-main-link" target="_blank">← Main Site</a>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="breadcrumb">pyTDS Wiki / <span>Achievements</span></div>
+    <div class="topbar-right"><div class="search-wrap">
+      <input type="text" id="searchInput" class="search" placeholder="Search wiki..." oninput="doSearch(this.value)" onkeydown="if(event.key==='Escape')clearSearch()"/>
+      <div class="search-results hidden" id="searchResults"></div>
+    </div></div>
+  </div>
+  <article class="content">    <div class="page-header">
+      <h1 class="page-title">Achievements</h1>
+      <p class="page-sub">7 achievements saved to achievements.json — unlocked once, permanent</p>
+    </div>
+    <div class="info-box"><strong>Storage:</strong> Achievements are saved in <code>achievements.json</code> next to the game folder. Deleting this file resets all achievements.</div>
+    <div class="wiki-section">
+      <div class="ach-grid"><div class="ach-card">
+      <div class="ach-icon">🟢</div>
+      <div>
+        <div class="ach-name">Первый путь <span class="badge badge-green">first_path</span></div>
+        <div class="ach-desc" style="color:var(--muted);font-size:12px;margin-top:2px">Пройти Easy режим</div>
+        <div class="ach-desc" style="margin-top:6px">Complete Easy mode from wave 1 to 20 and defeat the Grave Digger.</div>
+      </div>
+    </div><div class="ach-card">
+      <div class="ach-icon">🟣</div>
+      <div>
+        <div class="ach-name">Падший ангел <span class="badge badge-purple">fallen_angel</span></div>
+        <div class="ach-desc" style="color:var(--muted);font-size:12px;margin-top:2px">Пройти Fallen режим</div>
+        <div class="ach-desc" style="margin-top:6px">Complete Fallen mode from wave 1 to 40 including the Fallen King.</div>
+      </div>
+    </div><div class="ach-card">
+      <div class="ach-icon">🔵</div>
+      <div>
+        <div class="ach-name">tH3 GL1tcH <span class="badge badge-blue">glitch</span></div>
+        <div class="ach-desc" style="color:var(--muted);font-size:12px;margin-top:2px">Пройти Hidden Wave. Недоступно</div>
+        <div class="ach-desc" style="margin-top:6px">Complete the Hidden Wave. Currently marked as unavailable in the game.</div>
+      </div>
+    </div><div class="ach-card">
+      <div class="ach-icon">❤️</div>
+      <div>
+        <div class="ach-name">Жертва Короля <span class="badge badge-red">king_victim</span></div>
+        <div class="ach-desc" style="color:var(--muted);font-size:12px;margin-top:2px">Проиграть Fallen King на 40 волне Fallen</div>
+        <div class="ach-desc" style="margin-top:6px">Lose the game specifically against the Fallen King at wave 40 of Fallen mode.</div>
+      </div>
+    </div><div class="ach-card">
+      <div class="ach-icon">🏅</div>
+      <div>
+        <div class="ach-name">Истинный конец <span class="badge badge-gold">true_end</span></div>
+        <div class="ach-desc" style="color:var(--muted);font-size:12px;margin-top:2px">Пройти True Fallen</div>
+        <div class="ach-desc" style="margin-top:6px">Complete the True Fallen mode — defeat the True Fallen King.</div>
+      </div>
+    </div><div class="ach-card">
+      <div class="ach-icon">🎫</div>
+      <div>
+        <div class="ach-name">Проходной билет <span class="badge badge-blue">free_pass</span></div>
+        <div class="ach-desc" style="color:var(--muted);font-size:12px;margin-top:2px">Пройти Easy не убив финального босса</div>
+        <div class="ach-desc" style="margin-top:6px">Complete Easy mode without killing the final boss (Grave Digger).</div>
+      </div>
+    </div><div class="ach-card">
+      <div class="ach-icon">💰</div>
+      <div>
+        <div class="ach-name">Богач <span class="badge badge-gold">rich</span></div>
+        <div class="ach-desc" style="color:var(--muted);font-size:12px;margin-top:2px">Иметь больше 5000 монет одновременно</div>
+        <div class="ach-desc" style="margin-top:6px">Accumulate more than 5,000 coins at the same time during a game.</div>
+      </div>
+    </div></div>
+    </div></article>
+</main><script src="wiki.js"></script></body></html>
